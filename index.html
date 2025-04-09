@@ -16,7 +16,7 @@
   </header>
 
   <main class="max-w-3xl mx-auto space-y-10 p-6">
-    <!-- 範例作品卡片 -->
+    <!-- 作品卡片 -->
     <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
       x-data="{ slide: 0, images: ['adas1.png', 'adas2.png', 'adas3.png', 'adas4.png'], zoom: false, zoomImg: '' }">
 
@@ -66,6 +66,57 @@
         </ul>
         <p class="text-gray-600 text-sm">
           🧠 在此專案中，我負責場景生成開發，並針對不同駕駛情境設計通用地圖規格，擴充事件編輯器功能以支援多樣模擬測試。
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['IT3.jpg'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="IT3圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🏓 IT3: Immersive Table Tennis Training Based on 3D Reconstruction of Broadcast Video</h2>
+        <p class="text-gray-700 mb-4">
+          專業選手通常透過觀看比賽影片來觀察對手的發球，但轉播畫面大多為側視角，缺乏沉浸感。本作品旨在根據任意桌球轉播影片，重建3D比賽場景，結合AI預測的球員動作與球的位置。此外，系統提供編輯工具，可調整桌子位置並修正球員與球的位置。修正後的數據將用於模擬球的軌跡。透過本模擬系統，選手能在VR中以第一人稱視角訓練反應與接球能力，並從任意視角觀察自己及對手的動作，提升訓練效果。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>⛹️‍♂️ 3D Human Motion Reconstruction: 使用SLAHMR計算世界坐標系下的人體軌跡，並將SMPL放入虛擬場景中，提供對手發球、觀賽的3D人物模型</li>
+          <li>🖥️ 物理模擬: 計算球碰撞進入時的反彈和角速度，而非使用 Unity 的物理材質</li>
+          <li>📷 Motion Capture: 使用Meta Movement SDK存取玩家的全身姿勢，在訓練過程中，逐幀記錄使用者的 3D 骨骼關節位置，以提供使用者重播動作</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 我在此專案中，負責整合UI系統，規劃利用Motion Capture捕捉的使用者動作進行重播的流程，以及設計第一人稱視角的觀賽操作。我也透過實際在Quest 3設備上的測試，不斷優化介面，確保使用者能夠獲得流暢的操作體驗。我也在研究過程中學習如何提出關於提升桌球技能的問題，並透過朋友試玩收集數據，進一步優化功能與使用體驗。
         </p>
       </div>
     </div>
@@ -122,8 +173,212 @@
       </div>
     </div>
 
+    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['phys1.png', 'phys2.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="物理模擬圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🎯 物理模擬</h2>
+        <p class="text-gray-700 mb-4">
+          實作腳踏車程序化生成同時，參與鈊象的物理模擬案，擴充Cannon.js原先沒有的連續碰撞偵測CCD功能，以及添加閘門動畫物件，不因碰撞而改變物件Transformation的特殊物理，套用Three.js，將3D彈珠檯呈現在網頁上，於EC2平台使用Nginx架設，Server端使用Node.js執行接收物理封包系統，此系統管理多個物理驗證Thread提供多方連線，用Socket串接網頁場景與後台驗證物理一致性，完成任何時間都能還原的物理檢查。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>⏳ CCD: 使用Bisection提供下一次碰撞時間，解決物體快速移動穿透的問題</li>
+          <li>🖥️ 在EC2架設前後端物理驗證系統</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 我在這個專案學習三個主要的技術。第一是CCD，參考相關CCD的論文，先使用了Supersampling切分更小步長偵測碰撞的時間，進而使用Bisection加速尋找碰撞時間，成果圖的對應時間線參考[8]繪製。第二是物理驗證，Client端的物理狀態以最少資訊傳輸到Server端驗證，最少化過程必須深入Cannon.js理解內部架構，考慮哪些變數需要傳送，以達Server可還原Client當時狀態並驗證結果。第三是架設Server，學習使用Nginx架起Client網頁，最後成功用Socket連上的那一刻感動不已。
+        </p>
+      </div>
     </div>
-    <!-- 可依需要繼續複製新增 -->
+
+    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['yoga1.jpg', 'yoga2.jpg', 'yoga3.jpg', 'yoga4.jpg'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="產後婦女運動健身平台圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🧘 產後婦女運動健身平台</h2>
+        <p class="text-gray-700 mb-4">
+          這是我們與清大運動科技中心合作的產學計畫，專為產後護理之家和坐月子中心房設計的應用程式。應用程式邀請專業瑜珈教練參與，精心挑選11項適合產後婦女的動作，並透過互動教學引導使用者正確執行。內建人體骨架捕捉技術，可即時評估動作完成度，並顯示運動到的部位。透過科技與運動的結合，幫助產後婦女更有效地恢復身體機能。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>📷 人體骨架捕捉: 使用MediaPipe分析2D影像中的3D人體骨架的節點位置</li>
+          <li>⛹️‍♂️ Unity: 便於擺放UI介面、教練模型，導入教練動作至Humanoid Avatars</li>
+          <li>📱 Android: 整合手機前置鏡頭，打包可執行的apk，提供在Android下使用</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 我負責開發整個 APP 系統，其中最具挑戰的是將 MediaPipe 整合至手機端。首先，我確認支援的平台，接著按照教學建置環境，安裝並設定 MSYS2、Visual C++ Build Tools 2019、Bazelisk、Docker 等工具。此外，安裝 Android NDK 時還需指定 21 版本，因為只要其中任何一項沒裝好，不是錯誤終止就是無法顯示畫面。手機端測試更為繁瑣，每次都需打包至手機確認效果。然而，經過一番調整與嘗試，最終成功完成整合。
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['hdr1.png', 'hdr2.png', 'hdr3.png', 'hdr4.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="High Dynamic Range Imaging圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">📷 High Dynamic Range Imaging</h2>
+        <p class="text-gray-700 mb-4">
+          由於受限於電腦儲存的RGB，照片會喪失一些資訊，因此藉由分析多張不同曝光照片的方式製作出HDR影像，為了取樣同一個像素在不同曝光的值，要先做到Alignment，使用Median Threshold Bitmap Alignment演算法，將多張不同曝光照片相鄰兩張對齊，接著分析相機Response Curves，求解least-square problem，得到該顏色的能量分布，最後套上Photographics或Bilateral-filtering等不同種類的Tone Mapping，得到栩栩如生的HDR影像。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>📷 Median Threshold Bitmap Alignment: XOR兩張照片的Threshold bitmap，並以容許誤差範圍的Exclusion bitmap作為Mask，階層式取最小誤差</li>
+          <li>🏙️ HDR Recovery: 取樣同一點在不同曝光下的顏色，使用SVD求解least-square problem，得出Response Curves</li>
+          <li>👻 Ghost removal: 在平均權重上添加懲罰，減少組合Radiance Map出現鬼影</li>
+          <li>☀️ Photographics: 分析luminance在全景中的表現，拉伸到RGB顯示範圍</li>
+          <li>📷 Bilateral-filtering: 取Intensity作Radiance Map保留高頻壓縮低頻的Filter</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 在這次的實作中，我所負責的部分是Tone Mapping，在課堂聆聽流程時，體會到線性代數的實用性，學習使用SVD求解least-square problem，以此得到照片的能量分布，接著比較兩種Tone Mapping的優缺，發現影像取得luminance、Intensity公式並不一樣，也發現不一定都是同一種演算法最好，有些得到不如預期的、有些則是得到不好的曝光，但不論是使用哪一種方法，每一張照片都是藝術的一部分。
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['is1.png', 'is2.png', 'is3.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="Image Stitching圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">⛰️ Image Stitching</h2>
+        <p class="text-gray-700 mb-4">
+          透過組合多張照片，能夠組合成一大張的全景照，首先要先將照片投影成圓柱狀，再來找照片中的特徵點，使用SIFT、Harris或MSOP等演算法提取特徵點，兩兩照片互相找尋最相近的點，接著使用RANSAC擷取要被貼合的點，求解least-square problem得出最適合的Affine Matrix，即可將照片貼在另一張上。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🌏 Cylindrical projection: 將照片投影到圓柱面，以利後續Feature Matching</li>
+          <li>🔺 Multi-Scale Oriented Patches (MSOP): 多階層不同大小影像特徵點取得，先對影像作Gaussian，再找尋Harris Corner，帶入ANMS得平均分布的點</li>
+          <li>📽️ Adaptive Non-maximal Suppression (ANMS): 迭代遮罩特徵點周圍，遮罩範圍漸小，逐一取得特徵點的量，使最後得到的特徵點平均分布於畫面上</li>
+          <li>📷 Feature Matching: 每階層的特徵點為8x8 patch，提供位置、orientation、normalisation資訊，使用Nearest Neighbors演算法找相近圖片特徵點對映</li>
+          <li>🚩 RANSAC: 迭代取樣特徵點對，解least-square problem求Affine Matrix</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 在這個專案中，我負責實作Cylindrical projection、MSOP、ANMS以及特徵點配對，使用Nearest Neighbors尋找最相近的點，由於參數可以調整的部分很多，一開始只抓得到少數特徵點，調整參數後有比較符合配對預期。Blending的過程中，我們發現若是接合移動的物體會使得結果模糊，像是樹或者水流，但若是不在接合處，就能夠有複製的效果，這是我們覺得蒐集素材有趣的地方。
+        </p>
+      </div>
+    </div>
 
   </main>
 
