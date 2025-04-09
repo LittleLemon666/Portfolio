@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的作品集導覽</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <header class="text-center py-10 bg-white shadow">
+    <h1 class="text-4xl font-bold mb-2">Hi，我是邱耑萌 ✨</h1>
+    <p class="text-lg text-gray-600">這是我的作品集導覽，歡迎欣賞！</p>
+  </header>
+
+  <main class="max-w-3xl mx-auto space-y-10 p-6">
+    <!-- 範例作品卡片 -->
+    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['adas1.png', 'adas2.png', 'adas3.png', 'adas4.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="程序化事件道路生成圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🛣️ 程序化事件道路生成</h2>
+        <p class="text-gray-700 mb-4">
+          此為台達研究院的 ADAS（先進駕駛輔助系統）研究計畫，目的是開發一套自動化場景生成系統。依據事件編輯器設計特定駕駛情境（如車輛切入、行人穿越、左轉）自動生成模擬場景，並輸出至 Carla
+          模擬器，進行大量自駕測試與驗證。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🚧 根據事件需求自動生成 OpenDRIVE 規範地圖</li>
+          <li>🛠️ 整合 RoadRunner，建立道路幾何與標記</li>
+          <li>🎯 Carla Leaderboard 測試靈活度與真實性</li>
+          <li>🧪 設計 ToF 機制，確保事件不中斷</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 在此專案中，我負責場景生成開發，並針對不同駕駛情境設計通用地圖規格，擴充事件編輯器功能以支援多樣模擬測試。
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['bpg0.jpg', 'bpg1.png', 'bpg2.png', 'bpg3.png', 'bpg4.png', 'bpg5.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="腳踏車騎乘路徑地形建構系統"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🚴 腳踏車騎乘路徑地形建構系統</h2>
+        <p class="text-gray-700 mb-4">
+          本計畫將配合應用在顯示周圍環境模擬身歷其境的騎乘腳踏車系統，透過使用飛輪裝置以及配戴擴增實境的眼鏡，不用出門就能感覺置身在真實道路。騎乘腳踏車過程中，場景會重現在擴增實境眼鏡上，透過程序化生成的方式，減少大量的生成計算量。場景中包含需要生成地形，但為了避免一次載入過大的地形資訊，我們嘗試開發將地形資訊壓縮成極小資料的系統，在使用者選擇完要騎乘的路徑後，系統能夠簡化相對於使用者遠方的地形資訊，且能保有原有的山形特徵，進而在程序化生成時，將簡化後的地形重建出來，且保留只出現在使用者視線範圍內的地形渲染，所有的視覺效果以不影響使用者觀感為標準，盡可能維持程序化生成的效能。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🚧 程序化生成：預處理道路與房屋資訊，接近使用者時動態生成</li>
+          <li>⛰️ 地形特徵點提取：受限於DEM解析度為30公尺，因此使用保留資料點方式儲存成特徵點。依照道路選擇器的道路，預處理下，先使用騎乘路徑距離遠近按QuadTree切割解析度大小，在大片解析度之中未被歸為特徵的點再依照一次微分、二次微分經Threshold增加保留點</li>
+          <li>🗺️ 地形重建：使用KDTree加速尋找周圍特徵點，並使用IDW、Bilinear重建</li>
+          <li>🏠 Shape Grammar：根據實際房屋給予規則，於執行場景動態載入與生成</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 在此計畫中，選擇騎乘路徑是最有趣的任務，必須包含房屋、起伏地形，因此參考陽金公路、風櫃嘴等自行車路段作為本計畫場景。樹則是依經緯度、Pitch、Yaw參考Google街景畫面，手動鋪上植被直到看得像。
+        </p>
+      </div>
+    </div>
+
+    </div>
+    <!-- 可依需要繼續複製新增 -->
+
+  </main>
+
+  <footer class="text-center text-gray-500 text-sm py-6">
+    © 2025 Chuan-Meng Chiu(邱耑萌) — Hosted on GitHub Pages
+  </footer>
+</body>
+
+</html>
