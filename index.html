@@ -113,8 +113,7 @@
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">
           🏓 IT3: Immersive Table Tennis Training Based on 3D Reconstruction of Broadcast Video
-          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">SIGGRAPH
-            Asia 2024</span>
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">SIGGRAPH Asia 2024</span>
         </h2>
         <p class="text-sm text-gray-500 font-medium mb-4">清大選修課-虛擬實境．Feb 2024 - Jun 2024</p>
         <p class="text-gray-700 mb-4">
@@ -129,6 +128,11 @@
           🧠 我在此專案中，負責整合UI系統，規劃利用Motion Capture捕捉的使用者動作進行重播的流程，以及設計第一人稱視角的觀賽操作。我也透過實際在Quest
           3設備上的測試，不斷優化介面，確保使用者能夠獲得流暢的操作體驗。我也在研究過程中學習如何提出關於提升桌球技能的問題，並透過朋友試玩收集數據，進一步優化功能與使用體驗。
         </p>
+        <!-- 連結 -->
+        <div class="mb-4 space-y-1 text-sm">
+          <p>📄 <a href="https://dl.acm.org/doi/10.1145/3681756.3697917" target="_blank" class="text-blue-600 underline">論文連結</a></p>
+          <p>🎥 <a href="https://drive.google.com/file/d/1E5gXpWBsowU4aaSgcTWZhZU8Mr0DzsoQ/view?usp=sharing" target="_blank" class="text-blue-600 underline">Demo 影片</a></p>
+        </div>
         <div class="mt-4 text-sm">
           <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">VR 桌球、3D 重建、Motion Capture、物理模擬、第一人稱互動、Unity</span></p>
         </div>
@@ -172,7 +176,10 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🚴 腳踏車騎乘路徑地形建構系統</h2>
+        <h2 class="text-2xl font-bold mb-2">
+          🚴 腳踏車騎乘路徑地形建構系統
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">實務專題成果展暨年度最佳專題競賽最佳人氣獎</span>
+        </h2>
         <p class="text-sm text-gray-500 font-medium mb-4">國家科學及技術委員會．Jan 2022 - Jan 2023</p>
         <p class="text-gray-700 mb-4">
           本計畫將配合應用在顯示周圍環境模擬身歷其境的騎乘腳踏車系統，透過使用飛輪裝置以及配戴擴增實境的眼鏡，不用出門就能感覺置身在真實道路。騎乘腳踏車過程中，場景會重現在擴增實境眼鏡上，透過程序化生成的方式，減少大量的生成計算量。場景中包含需要生成地形，但為了避免一次載入過大的地形資訊，我們嘗試開發將地形資訊壓縮成極小資料的系統，在使用者選擇完要騎乘的路徑後，系統能夠簡化相對於使用者遠方的地形資訊，且能保有原有的山形特徵，進而在程序化生成時，將簡化後的地形重建出來，且保留只出現在使用者視線範圍內的地形渲染，所有的視覺效果以不影響使用者觀感為標準，盡可能維持程序化生成的效能。
@@ -306,6 +313,122 @@
         </div>
       </div>
     </div>
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['gr1.jpg', 'gr2.png', 'gr3.jpg', 'gr4.png', 'gr5.png', 'gr6.jpg'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="Graphics Rush"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">
+          🏃 Graphics Rush
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">課堂22組中人氣票選第一名</span>
+        </h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修-電腦圖學導論．Dec 2020 - Jan 2021</p>
+        <p class="text-gray-700 mb-4">
+          結合圖學所學的Edge Detection、Uniform Quantization、Cardinal Spline、Environment mapping技術，加入依距離改變細節的LOD、雨滴與爆炸粒子特效、永遠只朝向相機面的Billboard，每個物件添加Texture美化，並使用Shader渲染場景，所有技術以圖學課日常作為遊戲包裝。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🔍 Level of Detail (LOD): 計算相機與物件距離，切分渲染的模型，提升效能</li>
+          <li>💧 使用Shader處理大量物件的水滴與爆炸特效</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 我所負責的部分是技術，跟同學討論後，把至今所學技術以遊戲的方式呈現，遊戲故事是描述被圖學作業追趕的學生，以雲霄飛車軌道做出總共六關的跑道，代表五項作業和一個隱藏關，遊戲中每一個物件都有意義，例如商店的名字叫140.118.127.125，即是繳交圖學作業的網址，Ver2代表有第二次上傳修改作業的機會，中boss會使用「作業」擾亂玩家。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Shader、OpenGL、C++</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['au1.png', 'au2.jpg', 'au3.png', 'au4.png', 'au5.png', 'au6.png', 'au7.png', 'au8.png', 'au9.jpg'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="Animal Unite"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">
+          🐧 Animal Unite
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">七校創意遊戲設計競賽最佳人氣獎</span>
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">最佳創新獎</span>
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">最佳遊戲設計獎</span>
+        </h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修-遊戲企劃與設計原理．Sep 2021 - Jan 2022</p>
+        <p class="text-gray-700 mb-4">
+          這是結合遊戲企劃與設計原理這門課所做的作品，課程介紹如何撰寫遊戲企劃、發想、一驗、二驗，直到最後產出成品，整個作品需要除了遊戲機制之外，外觀的美術與特效也是重要的一環，作品美術風格統一能表達作品的一致性，並隨時與組員溝通。
+        </p>
+        <p class="text-gray-600 text-sm">
+          🧠 製作這款遊戲是我與三位同學共同討論出來的，遊戲發想來自於超級雞馬，我們嘗試開發出單人也可以玩多個角色的遊戲，每一隻動物有各自的技能，技能與技能合作之下才能完成關卡。在分工上，有人負責角色，有人負責美術，有人負責整合，而我則是關卡設計，不過幾次的討論之後，我們發現美術所花的時間太多了，當時我想嘗試美術，因此我與同學互換工作接手美術，從原本Unity藍畫面，一點一滴畫出Tilemap、角色的站立圖、背景、指示牌、標題等等，完成風格統一。最後感謝同組的同學，在多次討論後，能夠完成這款遊戲，也給了我許多合作的經驗。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unity、Shader</span></p>
+        </div>
+      </div>
+    </div>
+
 
 
     <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
