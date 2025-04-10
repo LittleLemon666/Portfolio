@@ -784,6 +784,348 @@
       </div>
     </div>
 
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['cg1_1.png', 'cg1_2.png', 'cg1_3.png', 'cg1_4.png', 'cg1_5.png', 'cg1_6.png', 'cg1_7.png', 'cg1_8.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="影像處理圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">⛰️ 影像處理Image Editing</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-電腦圖學導論．Sep 2020</p>
+        <p class="text-gray-700 mb-4">
+          了解影像如何編碼、對影像作縮放等等，目的是熟悉有關影像處理的理論，並實作基本影像處理的技術。最基本的灰階功能，到統計顏色資訊Populosity Quantization，以及使用特殊演算法達到特殊效果的Dithering，還有實作NxN Kernel的Gaussian Filter，給予任意N也能夠完成該強度的Gaussian Filter，還有實作Edge Detection等等。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🎥 Populosity Quantization: 蒐集數量下的顏色，賦予舊顏色為相近的新顏色</li>
+          <li>🎥 Dithering - Brightness: 統計灰階值，平均灰階值作為閾值</li>
+          <li>🎥 Dithering - Cluster: 提供4x4區域閾值，依區域過濾</li>
+          <li>🎥 Dithering - Floyds: 以Zig-zag順序，傳遞資訊給指定鄰近格</li>
+          <li>🎥 Gaussian Filter: 提供NxN Kernel，與解決Kernel在畫面之外取值的問題</li>
+          <li>🎥 Edge Detect: 使用高頻的Filter取得結果</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 在這個作業中，從基本的轉灰階，進一步到蒐集整體影像資訊的Quantization，以及經過特殊演算法做出的功能，過程中遇到顏色數值溢位的處理，還要考慮預防讀取邊界之外的值、讀取的策略，對往後圖學的處理有了一定的基礎。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">C++、libtarga</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['cg2.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="迷宮圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🏰 迷宮Maze Visibility and Rendering Graphics</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-電腦圖學導論．Oct 2020</p>
+        <p class="text-gray-700 mb-4">
+          開始認識3D物件如何成像在螢幕上，在圖學的世界中，必須要熟悉世界物體的Transformation、相機的FOV、Near Plane、Far Plane，先從物體放置於世界的Model View Matrix，接著相機的Perspective Matrix投影到畫面上。而畫面物件的渲染需要經過Clipping，忽略不在視野內的牆壁，並在沒有牆壁的那面遞迴進入到下一道遠方的牆壁，所有物件的成像限制只使用OpenGL中的2D功能來呈現3D成果。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🎥 Model View Matrix、Perspective Matrix: 物件的Transformation寫入Model View Matrix，根據相機FOV等參數寫入Perspective Matrix呈現畫面</li>
+          <li>🎥 Clipping (View Frustum Culling): 所有物件只擷取視角內的畫面渲染</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 這個作業有趣的地方在於限制只能使用2D的程式碼，畫出3D的物件，相機的Frustum、投影矩陣都要自己計算。一開始先從1格4面牆的著手，能夠成功顯示在螢幕上之後，再進一步衍伸到顯示多面牆，過程中要想如何有效遞迴參數到鄰近格，也有遇到浮點數誤差，不過完成這個作業後，對圖學研究有了信心。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、MVP Matrix、Clipping、C++</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['cg3_1.png', 'cg3_2.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="雲霄飛車圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🎢 雲霄飛車Trains and Roller Coasters</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-電腦圖學導論．Oct 2020</p>
+        <p class="text-gray-700 mb-4">
+          藉由雲霄飛車的方式，認識以數學化方式設計彎曲的軌道，並利用OpenGL熟悉佈置3D場景，進一步呈現光影。藉由線性代數學到的矩陣，將物件的位置、旋轉、大小簡化問題成矩陣乘法，而Cardinal Spline、Cubic Spline下的軌道也可透過矩陣相乘完成。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🛤️ Cardinal Spline、Cubic Spline: 控制點位置和方向與曲線參數的矩陣相乘</li>
+          <li>🛤️ ArcLength: 以漸進式推近，最後以比例設新位置成等距ArcLength</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 軌道是由控制點形成的，透過矩陣的方式，每種Spline畫出來的位置算出來，依序把線「接起來」，軌道有長有短，用等距ArcLength讓雲霄飛車不會在距離短的控制點之間太慢或者距離拉太長而變快。過程中為了增加有趣性，也嘗試把obj模型載入進來，並在車頭添加車燈。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、Spline、C++</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['cg4_1.png', 'cg4_2.png', 'cg4_3.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="模擬水面圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🌊 水面模擬Water Surface and Rendering (GPU Shader)</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-電腦圖學導論．Nov 2020</p>
+        <p class="text-gray-700 mb-4">
+          Mesh由點線面架構組成，大量的運算使得需要依靠GPU計算，運用Shader繪製物件，模擬出Sin波和根據Heightmap起伏兩種不同的水面，學習模擬水面反射與折射，本作品特點在於使用dynamic environment mapping反射水面上的物體。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🔆 Material: 結合Directional light、Spot light、Point light對 Ambient、Diffuse、Specular不同的處理，作多個不同光源的結果相加</li>
+          <li>⛰️ Dynamic Environment mapping: 先繪製一次場景在Framebuffers，投放六個方向的畫面於Skybox，接著繪製水面時，水面Shader中反射與折射參考此Skybox，解決只反射天空無周圍物體的問題</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 水面模擬從未接觸之前就覺得是很神奇的技術，也是踏入物理模擬世界的其中一步，實作過程發現水面的Mesh的Vertex位置計算量非常大，若不用Shader來計算，電腦會非常的卡且難以執行。因為是第一次接觸到Shader，在編寫或Debug體驗到寫Shader的麻煩之處，給錯Shader位置或者型別不對都會使得成果不如預期，當時花了很多時間在找原因，但這也成為了日後寫Shader的經驗。為了讓水面能夠投影物件，特別去蒐集Dynamic Environment mapping的資訊，了解到需要使用Framebuffers，最後按照反射與折射，成像光打到的Skybox影像。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、Shader、Lighting、Dynamic Environment mapping、C++</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['fcg1_1.png', 'fcg1_2.png', 'fcg1_3.png', 'fcg1_4.png', 'fcg1_5.png', 'fcg1_6.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="機器人圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🤖 Hierarchy機器人</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-基礎電腦圖學．Mar 2021</p>
+        <p class="text-gray-700 mb-4">
+          透過Hierarchical Transformation讓機器人能夠做出騎馬舞、開合跳、月球漫步等多關節動作，也能達到如拔劍切換不同Transformation關係的動作，並使用Shader特效，例如光影、粒子效果、動態模糊等使結果豐富。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🦾 Hierarchy Transformation: 計算縮放旋轉移動矩陣，矩陣相乘出綜合結果</li>
+          <li>🔆 Shadow Mapping: 配合光的角度拍攝深度圖，其中也要拿捏深度圖解析度</li>
+          <li>🎥 Particle System: 給予不同起始時間與角度，達到粒子分散效果</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 要達到Hierarchy，必須要先對模型的物件依照可動部位分群並歸類，所使用的軟體是Maya，過程中發現到模型的材質在轉換型別時跑掉了，為了復原材質，特地將每一個物件手動歸類成原本的材質，有了一個模型不只一種材質的概念。完成分類後，接著要依照規定的動作，分時給予OpenGL改變物件的Transformation Matrix，每一個動作都要想這裡要動左臂或者那裡要動右翅膀，因為Hierarchy，每個部位都會連動影響，想辦法做出指定動作，其中也在拔刀動作遇到從左腳Hierarchy轉換到右手的Hierarchy上的問題。最後搭配Shader施展特效，例如增加影子的Shadow mapping，使整體的表演更加精采。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、Shader、Hierarchy Transformation、Lighting、Shadow Mapping、C++</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['fcg2_1.jpg', 'fcg2_2.jpg'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="OpenMesh圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🔍 OpenMesh參數化貼圖</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-基礎電腦圖學．May 2021</p>
+        <p class="text-gray-700 mb-4">
+          介紹OpenMesh的資料結構，以Vertex、Halfedge、Edge、Face組合成一個Mesh，之中也存在著Face-Face、Face-Vertex、Edge-Face的One-ring結構，依照屬性也會有處理Color、Position、TexCoord、Normal，透過這些特性，將一大片接連起來的三角面正確求解Texture參數化作為作業目標，在指定的模型塗上任意數量的Texture，並且對Texture進行Transformation，也能夠存取Texture檔案。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🎯 Parameterization: Mean Value Coordinates
+            此方法用於解決一大片Mesh每個Vertex的uv座標，首先在每個非邊界的Edge，Edge兩個Vertex個別求出在Edge旁的兩角度，賦予Vertex相互關係的權重，邊界上的Edge分布到uv座標的四邊，得出邊界Vertex的uv座標，接著以One-ring走訪非邊界Vertex所連接的Vertex，擺放權重加總於矩陣中，最後求解Linear equations得出非邊界Vertex的uv座標。
+          </li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 這次使用的OpenMesh在理解資料結構上研究了一段時間，也是幫助了解處理Mesh的有效作法，對於輸入的模型而言，也要了解到一個obj模型的組成方式，且模型擁有龐大的資料，在讀取與操作必須使用Shader，藉由GPU幫助渲染，而Shader只要參數設定錯誤就無法如期渲染，因此每個環節都需注意。克服了使用OpenMesh存取模型後，下一步是求解Texture的uv座標，而這裡參數化的過程不僅需要深入理解公式的意義，過程還需要求解Linear equations，最後才會算出每個Vertex的uv座標，深刻體會到Texture的背後有許多數學知識。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、OpenMesh、Parameterization、C++</span></p>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <footer class="text-center text-gray-500 text-sm py-6">
