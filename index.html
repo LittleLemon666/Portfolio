@@ -553,6 +553,237 @@
       </div>
     </div>
 
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['g1_1.jpg', 'g1_2.jpg', 'g1_3.jpg'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="遊戲程式設計第一部曲圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🏰 遊戲程式設計第一部曲 Chronicle of the Genocidal Precedence – Seed of Destruction</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-遊戲程式設計．Feb 2021 - Mar 2021</p>
+        <p class="text-gray-700 mb-4">
+          認識Unity的環境，使用Unity的好處有多個現有互動的套件供使用，搭配即時場景，能夠加快配置場景的流程，減少開發的麻煩。為了提供敵人移動並攻擊玩家，使用NaviMesh讓AI找尋離玩家最近的距離並移動，在距離內看到玩家就會發射砲彈攻擊，坦克車的車頭與車身能夠在同一Hierarchy Transformation下，車頭面向攻擊目標，而車身依行駛方向改變面向。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🛣️ NaviMesh: 設定地形可移動範圍，提供敵人AI場景移動的依據</li>
+          <li>🦾 Hierarchy Transformation: 車頭依滑鼠方向旋轉，車身依鍵盤移動與旋轉</li>
+          <li>☀️ Particle System: 爆炸煙霧、房屋倒塌煙霧瀰漫的效果</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 在這次的實作中，我所負責的部分是Tone Mapping，在課堂聆聽流程時，體會到線性代數的實用性，學習使用SVD求解least-square problem，以此得到照片的能量分布，接著比較兩種Tone
+          Mapping的優缺，發現影像取得luminance、Intensity公式並不一樣，也發現不一定都是同一種演算法最好，有些得到不如預期的、有些則是得到不好的曝光，但不論是使用哪一種方法，每一張照片都是藝術的一部分。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unity、NaviMesh、Hierarchy Transformation、Particle System</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['g2_1.jpg', 'g2_2.png', 'g2_3.png', 'g2_4.jpg', 'g2_5.jpg', 'g2_6.jpg'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="遊戲程式設計第二部曲圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🏰 遊戲程式設計第二部曲 Terrestrial Interference</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-遊戲程式設計．Mar 2021 - Apr 2021</p>
+        <p class="text-gray-700 mb-4">
+          2D橫向卷軸遊戲是在電玩遊戲中其中一個類型，著名的有瑪利歐、洛克人，Unity提供多個2D資源，諸如可放入場景圖片的Sprite、物理碰撞等等。藉由2D遊戲製作，體驗簡單遊戲完整的設計流程，而特效在2D也容易展現，使用Distortion模擬熱擾動、疊合隨時間改變Offset的Noise當作Sandstorm、Pixelation模擬怪物消失等等，搭上劇情成為一款單人遊戲。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🦾 Hinge Joint 2D、Semi-Solid Platform: 賦予2D物理行為</li>
+          <li>⏳ Distortion: 以時間參數扭曲畫面，渲染熱擾動效果</li>
+          <li>🏜️ Sandstorm: 原畫面疊上一層半透明雜訊，設定從左而右移動的Offset</li>
+          <li>🎥 Pixelation: 依時序與預處理黑白圖相乘，呈現隨時間消失的效果</li>
+          <li>💬 AssetBundle: 以劇情走向載入特定批次的對話資訊</li>
+          <li>🤖 Animator: 設計角色與怪物動畫Sprite Animation，用變數切換動作動畫</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 故事接續著第一部曲，遊戲設計成探索並擊倒怪物的動作遊戲，每一個地區可以收集我們隱藏起來的寶箱，這些寶物能夠合成大地圖，而遊戲內容分好壞兩種結局，好結局能夠獲得第三部曲的密碼。技術部分，要讓整體遊戲有回饋感，玩家被打到之後閃爍，怪物被冰凍槍有冰凍特效，消滅怪物的Pixelation特效，使用Animator做到怪物狀態機的各個動作。總結來說，整個遊戲花最久時間的就是設計圖片，為了使風格統一成像素風，以及設計角色動作，所有的圖片都是跟同學自創的。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unity、Shader、AssetBundle、Animator</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['g3_1.jpg', 'g3_2.jpg', 'g3_3.png'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="遊戲程式設計第三部曲圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🏰 遊戲程式設計第三部曲 Warlord v.s. Government</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-遊戲程式設計．Apr 2021 - May 2021</p>
+        <p class="text-gray-700 mb-4">
+          透過遠端伺服器，可以將電腦與手機聯網遊玩，而Unity方便之處，在於能夠部屬在不同的平台，電腦、手機甚至網頁都可以，縮短跨平台開發的流程。因此，搭配Photon平台，能夠使手機與電腦對打，之中也需考慮同步雙方物件的規則，由哪一方擁有物件的控制權，避免一方的資料竄改，使得遊戲對一方有利。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>📶 Photon Unity Networking: 提供手機或電腦可連線的平台，並擬定同步物件下的規則，物件的擁有權不可隨意被另一方消除。</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 繼第二部曲之後，故事劇情描述敵方陣營發現我方陣營的位置並展開對戰。遊戲設計成雙人連線塔防遊戲，由於是使用Photon平台連線，手機可以與電腦對打。開發過程中，我們發現檯面上的物件需要考慮控制權，以避免非預期結果，受限Photon在網路傳輸的流量，只能傳送類似指令控制兩方遊戲物件。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unity、Photon、Networking、Client–server model</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+      x-data="{ slide: 0, images: ['g4_1.jpg', 'g4_2.jpg', 'g4_3.jpg'], zoom: false, zoomImg: '' }">
+
+      <!-- 圖片展示區（圖片高度自適應、無裁切） -->
+      <div class="relative w-full">
+        <template x-for="(img, index) in images" :key="index">
+          <img x-show="slide === index" :src="'images/' + img" alt="遊戲程式設計第四部曲圖"
+            class="w-full h-auto transition duration-500 transform hover:scale-105 cursor-zoom-in"
+            @click="zoom = true; zoomImg = img" x-cloak />
+        </template>
+
+        <!-- 左右箭頭（不遮圖片內容） -->
+        <button @click="slide = (slide - 1 + images.length) % images.length"
+          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ‹
+        </button>
+        <button @click="slide = (slide + 1) % images.length"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-700 hover:bg-opacity-100">
+          ›
+        </button>
+      </div>
+
+      <!-- 點擊放大 modal -->
+      <div x-show="zoom" x-transition
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative max-w-[90%] max-h-[90%]">
+          <button @click="zoom = false"
+            class="absolute top-2 right-2 text-white bg-black bg-opacity-60 rounded-full px-3 py-1 text-xl hover:bg-opacity-90">
+            ✕
+          </button>
+          <img :src="'images/' + zoomImg" alt="放大圖" class="max-w-full max-h-full rounded shadow-xl" />
+        </div>
+      </div>
+
+      <!-- 文字介紹區塊 -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-2">🏰 遊戲程式設計第四部曲 Culmination of War</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-遊戲程式設計．May 2021 - Jun 2021</p>
+        <p class="text-gray-700 mb-4">
+          與Unity寫程式方式不同，Unreal使用線串聯功能。Unreal適合製作第一人稱射擊遊戲，技術重點在於快速的子彈移動傷害處理，搭配Ray Tracing檢查，避免子彈穿牆擊中玩家。在光影渲染上可調整Global illumination，使場景有更真實的感受。
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+          <li>🪁 Windzone: 區域性的使旗幟飄逸、周圍的樹木搖曳，並擺放合適中心位置</li>
+          <li>🚩 Cloth Simulation: 旗幟模型切割多片Mesh，賦予特殊物理碰撞</li>
+          <li>💣 Particle System: 煙霧、槍枝火花、火焰特效</li>
+          <li>🎯 Ray Tracing: 檢測子彈運動是否合理，避免穿牆誤傷玩家</li>
+        </ul>
+        <p class="text-gray-600 text-sm">
+          🧠 作為四部曲最後一個作品，劇情串聯前三部作品，以華盛頓跨河為靈感，與同學討論出擊倒核心人物為遊戲目標。安排場景上，Unreal在光影表現上較寫實，也因此使用起來比Unity需要更多電腦效能。技術方面，我們發現子彈偶爾會穿牆，因此我們使用Ray Tracing偵測是否與子彈碰撞，作為是否扣血的依據。
+        </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unreal、第一人稱射擊遊戲、Particle System、Ray Tracing</span></p>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <footer class="text-center text-gray-500 text-sm py-6">
