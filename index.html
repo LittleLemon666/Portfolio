@@ -17,7 +17,7 @@
 
   <main class="max-w-3xl mx-auto space-y-10 p-6">
     <!-- 作品卡片 -->
-    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
       x-data="{ slide: 0, images: ['adas1.png', 'adas2.png', 'adas3.png', 'adas4.png'], zoom: false, zoomImg: '' }">
 
       <!-- 圖片展示區（圖片高度自適應、無裁切） -->
@@ -54,6 +54,7 @@
       <!-- 文字介紹區塊 -->
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">🛣️ 程序化事件道路生成</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台達研究院．Aug 2023 - Jan 2025</p>
         <p class="text-gray-700 mb-4">
           此為台達研究院的 ADAS（先進駕駛輔助系統）研究計畫，目的是開發一套自動化場景生成系統。依據事件編輯器設計特定駕駛情境（如車輛切入、行人穿越、左轉）自動生成模擬場景，並輸出至 Carla
           模擬器，進行大量自駕測試與驗證。
@@ -67,10 +68,14 @@
         <p class="text-gray-600 text-sm">
           🧠 在此專案中，我負責場景生成開發，並針對不同駕駛情境設計通用地圖規格，擴充事件編輯器功能以支援多樣模擬測試。
         </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Procedural Generation、Carla、Unreal、RoadRunner、OpenDRIVE、ADAS testing、Python、C++、Bash、Docker</span></p>
+        </div>
       </div>
     </div>
 
-    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
       x-data="{ slide: 0, images: ['IT3.jpg'], zoom: false, zoomImg: '' }">
 
       <!-- 圖片展示區（圖片高度自適應、無裁切） -->
@@ -106,7 +111,12 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🏓 IT3: Immersive Table Tennis Training Based on 3D Reconstruction of Broadcast Video</h2>
+        <h2 class="text-2xl font-bold mb-2">
+          🏓 IT3: Immersive Table Tennis Training Based on 3D Reconstruction of Broadcast Video
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">SIGGRAPH
+            Asia 2024</span>
+        </h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">清大選修課-虛擬實境．Feb 2024 - Jun 2024</p>
         <p class="text-gray-700 mb-4">
           專業選手通常透過觀看比賽影片來觀察對手的發球，但轉播畫面大多為側視角，缺乏沉浸感。本作品旨在根據任意桌球轉播影片，重建3D比賽場景，結合AI預測的球員動作與球的位置。此外，系統提供編輯工具，可調整桌子位置並修正球員與球的位置。修正後的數據將用於模擬球的軌跡。透過本模擬系統，選手能在VR中以第一人稱視角訓練反應與接球能力，並從任意視角觀察自己及對手的動作，提升訓練效果。
         </p>
@@ -115,13 +125,18 @@
           <li>🖥️ 物理模擬: 計算球碰撞進入時的反彈和角速度，而非使用 Unity 的物理材質</li>
           <li>📷 Motion Capture: 使用Meta Movement SDK存取玩家的全身姿勢，在訓練過程中，逐幀記錄使用者的 3D 骨骼關節位置，以提供使用者重播動作</li>
         </ul>
-        <p class="text-gray-600 text-sm">
-          🧠 我在此專案中，負責整合UI系統，規劃利用Motion Capture捕捉的使用者動作進行重播的流程，以及設計第一人稱視角的觀賽操作。我也透過實際在Quest 3設備上的測試，不斷優化介面，確保使用者能夠獲得流暢的操作體驗。我也在研究過程中學習如何提出關於提升桌球技能的問題，並透過朋友試玩收集數據，進一步優化功能與使用體驗。
+        <p class="text-gray-600 text-sm mb-2">
+          🧠 我在此專案中，負責整合UI系統，規劃利用Motion Capture捕捉的使用者動作進行重播的流程，以及設計第一人稱視角的觀賽操作。我也透過實際在Quest
+          3設備上的測試，不斷優化介面，確保使用者能夠獲得流暢的操作體驗。我也在研究過程中學習如何提出關於提升桌球技能的問題，並透過朋友試玩收集數據，進一步優化功能與使用體驗。
         </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">VR 桌球、3D 重建、Motion Capture、物理模擬、第一人稱互動、Unity</span></p>
+        </div>
       </div>
     </div>
 
-    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
       x-data="{ slide: 0, images: ['bpg0.jpg', 'bpg1.png', 'bpg2.png', 'bpg3.png', 'bpg4.png', 'bpg5.png'], zoom: false, zoomImg: '' }">
 
       <!-- 圖片展示區（圖片高度自適應、無裁切） -->
@@ -158,22 +173,29 @@
       <!-- 文字介紹區塊 -->
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">🚴 腳踏車騎乘路徑地形建構系統</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">國家科學及技術委員會．Jan 2022 - Jan 2023</p>
         <p class="text-gray-700 mb-4">
           本計畫將配合應用在顯示周圍環境模擬身歷其境的騎乘腳踏車系統，透過使用飛輪裝置以及配戴擴增實境的眼鏡，不用出門就能感覺置身在真實道路。騎乘腳踏車過程中，場景會重現在擴增實境眼鏡上，透過程序化生成的方式，減少大量的生成計算量。場景中包含需要生成地形，但為了避免一次載入過大的地形資訊，我們嘗試開發將地形資訊壓縮成極小資料的系統，在使用者選擇完要騎乘的路徑後，系統能夠簡化相對於使用者遠方的地形資訊，且能保有原有的山形特徵，進而在程序化生成時，將簡化後的地形重建出來，且保留只出現在使用者視線範圍內的地形渲染，所有的視覺效果以不影響使用者觀感為標準，盡可能維持程序化生成的效能。
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
           <li>🚧 程序化生成：預處理道路與房屋資訊，接近使用者時動態生成</li>
-          <li>⛰️ 地形特徵點提取：受限於DEM解析度為30公尺，因此使用保留資料點方式儲存成特徵點。依照道路選擇器的道路，預處理下，先使用騎乘路徑距離遠近按QuadTree切割解析度大小，在大片解析度之中未被歸為特徵的點再依照一次微分、二次微分經Threshold增加保留點</li>
+          <li>⛰️
+            地形特徵點提取：受限於DEM解析度為30公尺，因此使用保留資料點方式儲存成特徵點。依照道路選擇器的道路，預處理下，先使用騎乘路徑距離遠近按QuadTree切割解析度大小，在大片解析度之中未被歸為特徵的點再依照一次微分、二次微分經Threshold增加保留點
+          </li>
           <li>🗺️ 地形重建：使用KDTree加速尋找周圍特徵點，並使用IDW、Bilinear重建</li>
           <li>🏠 Shape Grammar：根據實際房屋給予規則，於執行場景動態載入與生成</li>
         </ul>
         <p class="text-gray-600 text-sm">
           🧠 在此計畫中，選擇騎乘路徑是最有趣的任務，必須包含房屋、起伏地形，因此參考陽金公路、風櫃嘴等自行車路段作為本計畫場景。樹則是依經緯度、Pitch、Yaw參考Google街景畫面，手動鋪上植被直到看得像。
         </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Procedural Generation、OpenStreetMap、Digital Elevation Models、Unity、藍芽飛輪</span></p>
+        </div>
       </div>
     </div>
 
-    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
       x-data="{ slide: 0, images: ['phys1.png', 'phys2.png'], zoom: false, zoomImg: '' }">
 
       <!-- 圖片展示區（圖片高度自適應、無裁切） -->
@@ -210,6 +232,7 @@
       <!-- 文字介紹區塊 -->
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">🎯 物理模擬</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">鈊象電子．Mar 2022 - Oct 2022</p>
         <p class="text-gray-700 mb-4">
           實作腳踏車程序化生成同時，參與鈊象的物理模擬案，擴充Cannon.js原先沒有的連續碰撞偵測CCD功能，以及添加閘門動畫物件，不因碰撞而改變物件Transformation的特殊物理，套用Three.js，將3D彈珠檯呈現在網頁上，於EC2平台使用Nginx架設，Server端使用Node.js執行接收物理封包系統，此系統管理多個物理驗證Thread提供多方連線，用Socket串接網頁場景與後台驗證物理一致性，完成任何時間都能還原的物理檢查。
         </p>
@@ -218,12 +241,16 @@
           <li>🖥️ 在EC2架設前後端物理驗證系統</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 我在這個專案學習三個主要的技術。第一是CCD，參考相關CCD的論文，先使用了Supersampling切分更小步長偵測碰撞的時間，進而使用Bisection加速尋找碰撞時間，成果圖的對應時間線參考[8]繪製。第二是物理驗證，Client端的物理狀態以最少資訊傳輸到Server端驗證，最少化過程必須深入Cannon.js理解內部架構，考慮哪些變數需要傳送，以達Server可還原Client當時狀態並驗證結果。第三是架設Server，學習使用Nginx架起Client網頁，最後成功用Socket連上的那一刻感動不已。
+          🧠 我在這個專案學習三個主要的技術。第一是CCD，參考相關CCD的論文，先使用了Supersampling切分更小步長偵測碰撞的時間，進而使用Bisection加速尋找碰撞時間，成果圖的對應時間線參考相關論文繪製。第二是物理驗證，Client端的物理狀態以最少資訊傳輸到Server端驗證，最少化過程必須深入Cannon.js理解內部架構，考慮哪些變數需要傳送，以達Server可還原Client當時狀態並驗證結果。第三是架設Server，學習使用Nginx架起Client網頁，最後成功用Socket連上的那一刻感動不已。
         </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">CCD、EC2、Cannon.js、Three.js、物理驗證</span></p>
+        </div>
       </div>
     </div>
 
-    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
       x-data="{ slide: 0, images: ['yoga1.jpg', 'yoga2.jpg', 'yoga3.jpg', 'yoga4.jpg'], zoom: false, zoomImg: '' }">
 
       <!-- 圖片展示區（圖片高度自適應、無裁切） -->
@@ -260,6 +287,7 @@
       <!-- 文字介紹區塊 -->
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">🧘 產後婦女運動健身平台</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">清大運動科技中心．Mar 2023 - Sep 2023</p>
         <p class="text-gray-700 mb-4">
           這是我們與清大運動科技中心合作的產學計畫，專為產後護理之家和坐月子中心房設計的應用程式。應用程式邀請專業瑜珈教練參與，精心挑選11項適合產後婦女的動作，並透過互動教學引導使用者正確執行。內建人體骨架捕捉技術，可即時評估動作完成度，並顯示運動到的部位。透過科技與運動的結合，幫助產後婦女更有效地恢復身體機能。
         </p>
@@ -269,12 +297,18 @@
           <li>📱 Android: 整合手機前置鏡頭，打包可執行的apk，提供在Android下使用</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 我負責開發整個 APP 系統，其中最具挑戰的是將 MediaPipe 整合至手機端。首先，我確認支援的平台，接著按照教學建置環境，安裝並設定 MSYS2、Visual C++ Build Tools 2019、Bazelisk、Docker 等工具。此外，安裝 Android NDK 時還需指定 21 版本，因為只要其中任何一項沒裝好，不是錯誤終止就是無法顯示畫面。手機端測試更為繁瑣，每次都需打包至手機確認效果。然而，經過一番調整與嘗試，最終成功完成整合。
+          🧠 我負責開發整個 APP 系統，其中最具挑戰的是將 MediaPipe 整合至手機端。首先，我確認支援的平台，接著按照教學建置環境，安裝並設定 MSYS2、Visual C++ Build Tools
+          2019、Bazelisk、Docker 等工具。此外，安裝 Android NDK 時還需指定 21
+          版本，因為只要其中任何一項沒裝好，不是錯誤終止就是無法顯示畫面。手機端測試更為繁瑣，每次都需打包至手機確認效果。然而，經過一番調整與嘗試，最終成功完成整合。
         </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">MediaPipe、Unity、Android</span></p>
+        </div>
       </div>
     </div>
 
-    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
       x-data="{ slide: 0, images: ['hdr1.png', 'hdr2.png', 'hdr3.png', 'hdr4.png'], zoom: false, zoomImg: '' }">
 
       <!-- 圖片展示區（圖片高度自適應、無裁切） -->
@@ -311,23 +345,32 @@
       <!-- 文字介紹區塊 -->
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">📷 High Dynamic Range Imaging</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台大選修課-數位視覺效果．Feb 2022 - Mar 2022</p>
         <p class="text-gray-700 mb-4">
-          由於受限於電腦儲存的RGB，照片會喪失一些資訊，因此藉由分析多張不同曝光照片的方式製作出HDR影像，為了取樣同一個像素在不同曝光的值，要先做到Alignment，使用Median Threshold Bitmap Alignment演算法，將多張不同曝光照片相鄰兩張對齊，接著分析相機Response Curves，求解least-square problem，得到該顏色的能量分布，最後套上Photographics或Bilateral-filtering等不同種類的Tone Mapping，得到栩栩如生的HDR影像。
+          由於受限於電腦儲存的RGB，照片會喪失一些資訊，因此藉由分析多張不同曝光照片的方式製作出HDR影像，為了取樣同一個像素在不同曝光的值，要先做到Alignment，使用Median Threshold Bitmap
+          Alignment演算法，將多張不同曝光照片相鄰兩張對齊，接著分析相機Response Curves，求解least-square
+          problem，得到該顏色的能量分布，最後套上Photographics或Bilateral-filtering等不同種類的Tone Mapping，得到栩栩如生的HDR影像。
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>📷 Median Threshold Bitmap Alignment: XOR兩張照片的Threshold bitmap，並以容許誤差範圍的Exclusion bitmap作為Mask，階層式取最小誤差</li>
+          <li>📷 Median Threshold Bitmap Alignment: XOR兩張照片的Threshold bitmap，並以容許誤差範圍的Exclusion bitmap作為Mask，階層式取最小誤差
+          </li>
           <li>🏙️ HDR Recovery: 取樣同一點在不同曝光下的顏色，使用SVD求解least-square problem，得出Response Curves</li>
           <li>👻 Ghost removal: 在平均權重上添加懲罰，減少組合Radiance Map出現鬼影</li>
           <li>☀️ Photographics: 分析luminance在全景中的表現，拉伸到RGB顯示範圍</li>
           <li>📷 Bilateral-filtering: 取Intensity作Radiance Map保留高頻壓縮低頻的Filter</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 在這次的實作中，我所負責的部分是Tone Mapping，在課堂聆聽流程時，體會到線性代數的實用性，學習使用SVD求解least-square problem，以此得到照片的能量分布，接著比較兩種Tone Mapping的優缺，發現影像取得luminance、Intensity公式並不一樣，也發現不一定都是同一種演算法最好，有些得到不如預期的、有些則是得到不好的曝光，但不論是使用哪一種方法，每一張照片都是藝術的一部分。
+          🧠 在這次的實作中，我所負責的部分是Tone Mapping，在課堂聆聽流程時，體會到線性代數的實用性，學習使用SVD求解least-square problem，以此得到照片的能量分布，接著比較兩種Tone
+          Mapping的優缺，發現影像取得luminance、Intensity公式並不一樣，也發現不一定都是同一種演算法最好，有些得到不如預期的、有些則是得到不好的曝光，但不論是使用哪一種方法，每一張照片都是藝術的一部分。
         </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Tone Mapping、Python</span></p>
+        </div>
       </div>
     </div>
 
-    <div class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+
+    <div class="bg-white shadow-md rounded-2xl hover:shadow-lg transition"
       x-data="{ slide: 0, images: ['is1.png', 'is2.png', 'is3.png'], zoom: false, zoomImg: '' }">
 
       <!-- 圖片展示區（圖片高度自適應、無裁切） -->
@@ -364,19 +407,26 @@
       <!-- 文字介紹區塊 -->
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">⛰️ Image Stitching</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">台大選修課-數位視覺效果．Mar 2022 - Apr 2022</p>
         <p class="text-gray-700 mb-4">
-          透過組合多張照片，能夠組合成一大張的全景照，首先要先將照片投影成圓柱狀，再來找照片中的特徵點，使用SIFT、Harris或MSOP等演算法提取特徵點，兩兩照片互相找尋最相近的點，接著使用RANSAC擷取要被貼合的點，求解least-square problem得出最適合的Affine Matrix，即可將照片貼在另一張上。
+          透過組合多張照片，能夠組合成一大張的全景照，首先要先將照片投影成圓柱狀，再來找照片中的特徵點，使用SIFT、Harris或MSOP等演算法提取特徵點，兩兩照片互相找尋最相近的點，接著使用RANSAC擷取要被貼合的點，求解least-square
+          problem得出最適合的Affine Matrix，即可將照片貼在另一張上。
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
           <li>🌏 Cylindrical projection: 將照片投影到圓柱面，以利後續Feature Matching</li>
           <li>🔺 Multi-Scale Oriented Patches (MSOP): 多階層不同大小影像特徵點取得，先對影像作Gaussian，再找尋Harris Corner，帶入ANMS得平均分布的點</li>
           <li>📽️ Adaptive Non-maximal Suppression (ANMS): 迭代遮罩特徵點周圍，遮罩範圍漸小，逐一取得特徵點的量，使最後得到的特徵點平均分布於畫面上</li>
-          <li>📷 Feature Matching: 每階層的特徵點為8x8 patch，提供位置、orientation、normalisation資訊，使用Nearest Neighbors演算法找相近圖片特徵點對映</li>
+          <li>📷 Feature Matching: 每階層的特徵點為8x8 patch，提供位置、orientation、normalisation資訊，使用Nearest Neighbors演算法找相近圖片特徵點對映
+          </li>
           <li>🚩 RANSAC: 迭代取樣特徵點對，解least-square problem求Affine Matrix</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 在這個專案中，我負責實作Cylindrical projection、MSOP、ANMS以及特徵點配對，使用Nearest Neighbors尋找最相近的點，由於參數可以調整的部分很多，一開始只抓得到少數特徵點，調整參數後有比較符合配對預期。Blending的過程中，我們發現若是接合移動的物體會使得結果模糊，像是樹或者水流，但若是不在接合處，就能夠有複製的效果，這是我們覺得蒐集素材有趣的地方。
+          🧠 在這個專案中，我負責實作Cylindrical projection、MSOP、ANMS以及特徵點配對，使用Nearest
+          Neighbors尋找最相近的點，由於參數可以調整的部分很多，一開始只抓得到少數特徵點，調整參數後有比較符合配對預期。Blending的過程中，我們發現若是接合移動的物體會使得結果模糊，像是樹或者水流，但若是不在接合處，就能夠有複製的效果，這是我們覺得蒐集素材有趣的地方。
         </p>
+        <div class="mt-4 text-sm">
+          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Cylindrical projection、MSOP、ANMS、Python</span></p>
+        </div>
       </div>
     </div>
 
