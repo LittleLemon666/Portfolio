@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的作品集導覽</title>
+  <title>Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
   <header class="text-center py-10 bg-white shadow">
-    <h1 class="text-4xl font-bold mb-2">Hi，我是邱耑萌 ✨</h1>
-    <p class="text-lg text-gray-600">這是我的作品集導覽，歡迎欣賞！</p>
+    <h1 class="text-4xl font-bold mb-2">Hi，I'm Chuan-Meng Chiu (邱耑萌)✨</h1>
+    <p class="text-lg text-gray-600">Here is my portfolio — enjoy!</p>
   </header>
 
   <main class="max-w-3xl mx-auto space-y-10 p-6">
@@ -53,23 +53,22 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🛣️ 程序化事件道路生成</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台達研究院．Aug 2023 - Jan 2025</p>
+        <h2 class="text-2xl font-bold mb-2">🛣️ Advanced Driver Assistance Systems (ADAS) Testing</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">Delta Research Center．Aug 2023 - Jan 2025</p>
         <p class="text-gray-700 mb-4">
-          此為台達研究院的 ADAS（先進駕駛輔助系統）研究計畫，目的是開發一套自動化場景生成系統。依據事件編輯器設計特定駕駛情境（如車輛切入、行人穿越、左轉）自動生成模擬場景，並輸出至 Carla
-          模擬器，進行大量自駕測試與驗證。
+          This is an ADAS (Advanced Driver Assistance Systems) research project at Delta Research Center, aiming to develop an automated scenario generation system. Based on user-defined driving events (e.g., vehicle cut-in, pedestrian crossing, left turn), the system automatically generates simulation environments, exports them to the Carla simulator, and conducts large-scale autonomous driving tests and validation.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🚧 根據事件需求自動生成 OpenDRIVE 規範地圖</li>
-          <li>🛠️ 整合 RoadRunner，建立道路幾何與標記</li>
-          <li>🎯 Carla Leaderboard 測試靈活度與真實性</li>
-          <li>🧪 設計 ToF 機制，確保事件不中斷</li>
+          <li>🚧 Automatically generate OpenDRIVE-compliant maps based on event requirements</li>
+          <li>🛠️ Integrate with RoadRunner to construct road geometry and markings</li>
+          <li>🎯 Evaluate flexibility and realism through Carla Leaderboard tests</li>
+          <li>🧪 Design a ToF (Terminate-on-Failure) mechanism to ensure continuous event execution</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 在此專案中，我負責場景生成開發，並針對不同駕駛情境設計通用地圖規格，擴充事件編輯器功能以支援多樣模擬測試。
+          🧠 In this project, I was responsible for scenario generation development. I designed a general map specification for various driving situations and extended the event editor's functionality to support diverse simulation testing.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Procedural Generation、Carla、Unreal、RoadRunner、OpenDRIVE、ADAS testing、Python、C++、Bash、Docker</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Procedural Generation．Carla．Unreal．RoadRunner．OpenDRIVE．ADAS testing．Python．C++．Bash．Docker</span></p>
         </div>
       </div>
     </div>
@@ -115,26 +114,25 @@
           🏓 IT3: Immersive Table Tennis Training Based on 3D Reconstruction of Broadcast Video
           <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">SIGGRAPH Asia 2024</span>
         </h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">清大選修課-虛擬實境．Feb 2024 - Jun 2024</p>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTHU courses - Virtual Reality．Feb 2024 - Jun 2024</p>
         <p class="text-gray-700 mb-4">
-          專業選手通常透過觀看比賽影片來觀察對手的發球，但轉播畫面大多為側視角，缺乏沉浸感。本作品旨在根據任意桌球轉播影片，重建3D比賽場景，結合AI預測的球員動作與球的位置。此外，系統提供編輯工具，可調整桌子位置並修正球員與球的位置。修正後的數據將用於模擬球的軌跡。透過本模擬系統，選手能在VR中以第一人稱視角訓練反應與接球能力，並從任意視角觀察自己及對手的動作，提升訓練效果。
+          Professional players often study match footage to observe their opponent’s serve. However, broadcast videos are mostly captured from a side view, lacking immersion. This project aims to reconstruct 3D match scenes from any broadcast table tennis video, combining AI-predicted player motions and ball trajectories. The system also includes editing tools that allow users to adjust the table's position and correct the location of players and the ball. These corrected data are then used to simulate the ball's trajectory. Using this simulation system, players can train their reaction and receiving skills in VR from a first-person perspective, and observe their own and their opponent’s movements from any angle, enhancing training effectiveness.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>⛹️‍♂️ 3D Human Motion Reconstruction: 使用SLAHMR計算世界坐標系下的人體軌跡，並將SMPL放入虛擬場景中，提供對手發球、觀賽的3D人物模型</li>
-          <li>🖥️ 物理模擬: 計算球碰撞進入時的反彈和角速度，而非使用 Unity 的物理材質</li>
-          <li>📷 Motion Capture: 使用Meta Movement SDK存取玩家的全身姿勢，在訓練過程中，逐幀記錄使用者的 3D 骨骼關節位置，以提供使用者重播動作</li>
+          <li>⛹️‍♂️ 3D Human Motion Reconstruction: Use SLAHMR to estimate human trajectories in world coordinates and embed SMPL models into the virtual scene, providing realistic 3D avatars for observing or returning serves</li>
+          <li>🖥️ Physics Simulation: Compute ball bounces and angular velocity at impact instead of relying on Unity’s default physics materials</li>
+          <li>📷 Motion Capture: Use Meta Movement SDK to capture full-body posture of the player, recording 3D skeletal joint positions frame-by-frame during training for playback</li>
         </ul>
         <p class="text-gray-600 text-sm mb-2">
-          🧠 我在此專案中，負責整合UI系統，規劃利用Motion Capture捕捉的使用者動作進行重播的流程，以及設計第一人稱視角的觀賽操作。我也透過實際在Quest
-          3設備上的測試，不斷優化介面，確保使用者能夠獲得流暢的操作體驗。我也在研究過程中學習如何提出關於提升桌球技能的問題，並透過朋友試玩收集數據，進一步優化功能與使用體驗。
+          🧠 In this project, I was responsible for UI integration, designing the motion replay flow using motion capture data, and implementing first-person viewing operations. Through hands-on testing on the Quest 3 device, I continuously optimized the interface to ensure a smooth user experience. During development, I also explored how to ask meaningful questions related to improving table tennis skills, gathered feedback through playtesting with friends, and iteratively refined features and usability.
         </p>
         <!-- 連結 -->
         <div class="mb-4 space-y-1 text-sm">
-          <p>📄 <a href="https://dl.acm.org/doi/10.1145/3681756.3697917" target="_blank" class="text-blue-600 underline">論文連結</a></p>
-          <p>🎥 <a href="https://drive.google.com/file/d/1E5gXpWBsowU4aaSgcTWZhZU8Mr0DzsoQ/view?usp=sharing" target="_blank" class="text-blue-600 underline">Demo 影片</a></p>
+          <p>📄 <a href="https://dl.acm.org/doi/10.1145/3681756.3697917" target="_blank" class="text-blue-600 underline">Paper link</a></p>
+          <p>🎥 <a href="https://drive.google.com/file/d/1E5gXpWBsowU4aaSgcTWZhZU8Mr0DzsoQ/view?usp=sharing" target="_blank" class="text-blue-600 underline">Demo video</a></p>
         </div>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">VR 桌球、3D 重建、Motion Capture、物理模擬、第一人稱互動、Unity</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">VR table tennis．3D Reconstruction．Motion Capture．first-person perspective．Unity</span></p>
         </div>
       </div>
     </div>
@@ -177,26 +175,25 @@
       <!-- 文字介紹區塊 -->
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">
-          🚴 腳踏車騎乘路徑地形建構系統
-          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">實務專題成果展暨年度最佳專題競賽最佳人氣獎</span>
+          🚴 Procedural Generation of Bike Path
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">Best Popularity Award</span>
         </h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">國家科學及技術委員會．Jan 2022 - Jan 2023</p>
+        <p class="text-sm text-gray-500 font-medium mb-4">College Student Research Scholarship, NSC．Jan 2022 - Jan 2023</p>
         <p class="text-gray-700 mb-4">
-          本計畫將配合應用在顯示周圍環境模擬身歷其境的騎乘腳踏車系統，透過使用飛輪裝置以及配戴擴增實境的眼鏡，不用出門就能感覺置身在真實道路。騎乘腳踏車過程中，場景會重現在擴增實境眼鏡上，透過程序化生成的方式，減少大量的生成計算量。場景中包含需要生成地形，但為了避免一次載入過大的地形資訊，我們嘗試開發將地形資訊壓縮成極小資料的系統，在使用者選擇完要騎乘的路徑後，系統能夠簡化相對於使用者遠方的地形資訊，且能保有原有的山形特徵，進而在程序化生成時，將簡化後的地形重建出來，且保留只出現在使用者視線範圍內的地形渲染，所有的視覺效果以不影響使用者觀感為標準，盡可能維持程序化生成的效能。
+          This project is part of an immersive cycling simulation system that displays surrounding environments. By using a stationary bike (flywheel device) and wearing augmented reality (AR) glasses, users can experience realistic outdoor cycling without leaving their home. During the ride, the environment is rendered in AR glasses using procedural generation techniques to reduce computational load. Since terrain data is required in the scene, we aim to compress this information into extremely compact data, avoiding the need to load massive terrain data all at once.
+          Once a user selects a riding route, the system simplifies distant terrain details while preserving key mountain features, and reconstructs the terrain procedurally. Only terrain within the user’s line of sight is rendered, ensuring efficient performance without compromising visual quality.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🚧 程序化生成：預處理道路與房屋資訊，接近使用者時動態生成</li>
-          <li>⛰️
-            地形特徵點提取：受限於DEM解析度為30公尺，因此使用保留資料點方式儲存成特徵點。依照道路選擇器的道路，預處理下，先使用騎乘路徑距離遠近按QuadTree切割解析度大小，在大片解析度之中未被歸為特徵的點再依照一次微分、二次微分經Threshold增加保留點
-          </li>
-          <li>🗺️ 地形重建：使用KDTree加速尋找周圍特徵點，並使用IDW、Bilinear重建</li>
-          <li>🏠 Shape Grammar：根據實際房屋給予規則，於執行場景動態載入與生成</li>
+          <li>🚧 Procedural Generation: Preprocess road and building data; dynamically generate nearby elements</li>
+          <li>⛰️ Terrain Feature Point Extraction: Due to the 30-meter resolution of DEM data, we store selective points as key features. Based on the route selected, we pre-split the terrain using QuadTree depending on the distance from the user. Non-key points in large areas are preserved using first- and second-order derivatives with thresholding</li>
+          <li>🗺️ Terrain Reconstruction: Use KDTree to accelerate nearby feature point searches, then apply IDW (Inverse Distance Weighting) and Bilinear interpolation for reconstruction</li>
+          <li>🏠 Shape Grammar: Define generation rules based on real-world building structures, dynamically loading and generating them in the runtime scene</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 在此計畫中，選擇騎乘路徑是最有趣的任務，必須包含房屋、起伏地形，因此參考陽金公路、風櫃嘴等自行車路段作為本計畫場景。樹則是依經緯度、Pitch、Yaw參考Google街景畫面，手動鋪上植被直到看得像。
+          🧠 In this project, the most interesting task was selecting realistic cycling routes that include buildings and varying terrain. We referenced popular bike routes like Yangjin Highway and Fengguizui. Trees were manually placed based on latitude, pitch, and yaw, referencing Google Street View, until the scene looked realistic.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Procedural Generation、OpenStreetMap、Digital Elevation Models、Unity、藍芽飛輪</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Procedural Generation．OpenStreetMap．Digital Elevation Models．Unity．Bluetooth Flywheel</span></p>
         </div>
       </div>
     </div>
@@ -238,20 +235,23 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🎯 物理模擬</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">鈊象電子．Mar 2022 - Oct 2022</p>
+        <h2 class="text-2xl font-bold mb-2">🎯 Physics Engine Implement</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">International Games System．Mar 2022 - Oct 2022</p>
         <p class="text-gray-700 mb-4">
-          實作腳踏車程序化生成同時，參與鈊象的物理模擬案，擴充Cannon.js原先沒有的連續碰撞偵測CCD功能，以及添加閘門動畫物件，不因碰撞而改變物件Transformation的特殊物理，套用Three.js，將3D彈珠檯呈現在網頁上，於EC2平台使用Nginx架設，Server端使用Node.js執行接收物理封包系統，此系統管理多個物理驗證Thread提供多方連線，用Socket串接網頁場景與後台驗證物理一致性，完成任何時間都能還原的物理檢查。
+          While working on Procedural Generation of Bike Path, I also participated in a physics simulation project with IGS (鈊象). My tasks included extending Cannon.js by implementing Continuous Collision Detection (CCD), which it originally lacked, and adding special physics behavior for gate-like animated objects—preventing their transformations from being altered by collisions. The simulation was rendered using Three.js and deployed as a 3D pinball machine in the browser. On the backend, I set up a Node.js server on EC2 using Nginx, which manages multiple physics verification threads. A socket-based system connects the client’s scene with the server, ensuring consistent and reproducible physical interactions at any point in time.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>⏳ CCD: 使用Bisection提供下一次碰撞時間，解決物體快速移動穿透的問題</li>
-          <li>🖥️ 在EC2架設前後端物理驗證系統</li>
+          <li>⏳ CCD: Used bisection to estimate the next collision time, solving the tunneling problem caused by fast-moving objects</li>
+          <li>🖥️ Deployed a backend physics verification system using EC2 + Nginx</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 我在這個專案學習三個主要的技術。第一是CCD，參考相關CCD的論文，先使用了Supersampling切分更小步長偵測碰撞的時間，進而使用Bisection加速尋找碰撞時間，成果圖的對應時間線參考相關論文繪製。第二是物理驗證，Client端的物理狀態以最少資訊傳輸到Server端驗證，最少化過程必須深入Cannon.js理解內部架構，考慮哪些變數需要傳送，以達Server可還原Client當時狀態並驗證結果。第三是架設Server，學習使用Nginx架起Client網頁，最後成功用Socket連上的那一刻感動不已。
+          🧠 I learned three core techniques in this project:
+          CCD Implementation: Based on academic papers, I started with supersampling to detect collisions using smaller time steps, then applied bisection to accelerate the search for the precise collision time. I referenced diagrams from related papers to plot the collision time graphs.
+          Physics Verification: To minimize transmitted data, the client sends only essential state variables to the server, which reconstructs and verifies the simulation. This required deep understanding of Cannon.js’s internals to determine which variables are necessary to achieve consistent state recovery.
+          Server Deployment: I learned how to serve the client webpage using Nginx and finally connected everything via WebSockets—the moment it successfully synced brought me genuine excitement.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">CCD、EC2、Cannon.js、Three.js、物理驗證</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">CCD．EC2．Cannon.js．Three.js．JavaScript</span></p>
         </div>
       </div>
     </div>
@@ -293,23 +293,21 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🧘 產後婦女運動健身平台</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">清大運動科技中心．Mar 2023 - Sep 2023</p>
+        <h2 class="text-2xl font-bold mb-2">🧘 Postpartum Recovery App</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTHU Sports Tech Center．Mar 2023 - Sep 2023</p>
         <p class="text-gray-700 mb-4">
-          這是我們與清大運動科技中心合作的產學計畫，專為產後護理之家和坐月子中心房設計的應用程式。應用程式邀請專業瑜珈教練參與，精心挑選11項適合產後婦女的動作，並透過互動教學引導使用者正確執行。內建人體骨架捕捉技術，可即時評估動作完成度，並顯示運動到的部位。透過科技與運動的結合，幫助產後婦女更有效地恢復身體機能。
+          This was an industry-academic collaboration project with the National Tsing Hua University Sports Technology Center, aimed at developing an application specifically designed for postpartum care homes and confinement centers. The app invited professional yoga instructors to curate 11 postpartum-friendly movements, and provided interactive guidance to help users perform them correctly. It featured built-in human skeleton tracking, allowing real-time evaluation of pose accuracy and visual feedback on targeted muscle areas. By combining technology and exercise, the app aimed to help postpartum women recover physical function more effectively.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>📷 人體骨架捕捉: 使用MediaPipe分析2D影像中的3D人體骨架的節點位置</li>
-          <li>⛹️‍♂️ Unity: 便於擺放UI介面、教練模型，導入教練動作至Humanoid Avatars</li>
-          <li>📱 Android: 整合手機前置鏡頭，打包可執行的apk，提供在Android下使用</li>
+          <li>📷 Human Skeleton Tracking: Used MediaPipe to analyze 3D skeleton joint positions from 2D images</li>
+          <li>⛹️‍♂️ Unity: Used for UI placement, coach model integration, and importing motions into Humanoid Avatars</li>
+          <li>📱 Android: Integrated the front camera and exported as an APK for Android deployment</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 我負責開發整個 APP 系統，其中最具挑戰的是將 MediaPipe 整合至手機端。首先，我確認支援的平台，接著按照教學建置環境，安裝並設定 MSYS2、Visual C++ Build Tools
-          2019、Bazelisk、Docker 等工具。此外，安裝 Android NDK 時還需指定 21
-          版本，因為只要其中任何一項沒裝好，不是錯誤終止就是無法顯示畫面。手機端測試更為繁瑣，每次都需打包至手機確認效果。然而，經過一番調整與嘗試，最終成功完成整合。
+          🧠 I was responsible for the entire app development. The most challenging part was integrating MediaPipe into mobile. First, I ensured platform compatibility and followed detailed tutorials to build the environment—installing and configuring MSYS2, Visual C++ Build Tools 2019, Bazelisk, Docker, etc. Installing Android NDK version 21 was also required. Any missing setup would result in either errors or black screens. Mobile-side testing was even more cumbersome, requiring each build to be installed on the phone for verification. After many adjustments and attempts, I successfully completed the integration.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">MediaPipe、Unity、Android</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">MediaPipe．Pose estimation．Unity．Android</span></p>
         </div>
       </div>
     </div>
@@ -353,21 +351,21 @@
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">
           🏃 Graphics Rush
-          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">課堂22組中人氣票選第一名</span>
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">First Place in Popular Vote among 22 Teams</span>
         </h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修-電腦圖學導論．Dec 2020 - Jan 2021</p>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses – Computer Graphics．Dec 2020 - Jan 2021</p>
         <p class="text-gray-700 mb-4">
-          結合圖學所學的Edge Detection、Uniform Quantization、Cardinal Spline、Environment mapping技術，加入依距離改變細節的LOD、雨滴與爆炸粒子特效、永遠只朝向相機面的Billboard，每個物件添加Texture美化，並使用Shader渲染場景，所有技術以圖學課日常作為遊戲包裝。
+          A game built using computer graphics techniques, including Edge Detection, Uniform Quantization, Cardinal Spline, and Environment Mapping. The game also featured Level of Detail (LOD) based on camera distance, rain and explosion particle effects, and Billboards that always face the camera. Every object was textured for visual appeal, and shaders were used to render the scene. All graphics techniques were wrapped in the narrative of a student being chased by graphics assignments, forming the theme of the game.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🔍 Level of Detail (LOD): 計算相機與物件距離，切分渲染的模型，提升效能</li>
-          <li>💧 使用Shader處理大量物件的水滴與爆炸特效</li>
+          <li>🔍 Level of Detail (LOD): Adjusted model complexity based on camera-object distance for performance</li>
+          <li>💧 Used shaders to render raindrops and explosion effects across many objects</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 我所負責的部分是技術，跟同學討論後，把至今所學技術以遊戲的方式呈現，遊戲故事是描述被圖學作業追趕的學生，以雲霄飛車軌道做出總共六關的跑道，代表五項作業和一個隱藏關，遊戲中每一個物件都有意義，例如商店的名字叫140.118.127.125，即是繳交圖學作業的網址，Ver2代表有第二次上傳修改作業的機會，中boss會使用「作業」擾亂玩家。
+          🧠 I was in charge of the technical implementation. After discussions with my teammates, we decided to showcase all the computer graphics techniques we had learned through a game. The game story featured a student escaping assignments via a six-level roller coaster, symbolizing five assignments and one hidden stage. Every element had meaning—for instance, the shop was named 140.118.127.125, which is the actual submission site for assignments. "Ver2" indicated a second chance to re-upload homework. Even the miniboss would try to disrupt the player using “assignments.”
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Shader、OpenGL、C++</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Shader．OpenGL．C++</span></p>
         </div>
       </div>
     </div>
@@ -412,23 +410,26 @@
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">
           🐧 Animal Unite
-          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">七校創意遊戲設計競賽最佳人氣獎</span>
-          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">最佳創新獎</span>
-          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">最佳遊戲設計獎</span>
         </h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修-遊戲企劃與設計原理．Sep 2021 - Jan 2022</p>
+        <h2 class="text-2xl font-bold mb-2">
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">Best Popularity Award</span>
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">Best Innovation Award</span>
+          <span class="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2 align-middle">Best Game Design Award</span>
+        </h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Game Development & Design Final Project．Sep 2021 - Jan 2022</p>
         <p class="text-gray-700 mb-4">
-          這是結合遊戲企劃與設計原理這門課所做的作品，課程介紹如何撰寫遊戲企劃、發想、一驗、二驗，直到最後產出成品，整個作品需要除了遊戲機制之外，外觀的美術與特效也是重要的一環，作品美術風格統一能表達作品的一致性，並隨時與組員溝通。
+          This was a course project for the class Game Planning and Design Principles. The course covered how to write a game proposal, ideation, first and second evaluations, and final production. Beyond just gameplay mechanics, visual aesthetics and special effects were essential to the final product. Maintaining a consistent visual style and communicating closely with teammates were critical.
         </p>
         <p class="text-gray-600 text-sm">
-          🧠 製作這款遊戲是我與三位同學共同討論出來的，遊戲發想來自於超級雞馬，我們嘗試開發出單人也可以玩多個角色的遊戲，每一隻動物有各自的技能，技能與技能合作之下才能完成關卡。在分工上，有人負責角色，有人負責美術，有人負責整合，而我則是關卡設計，不過幾次的討論之後，我們發現美術所花的時間太多了，當時我想嘗試美術，因此我與同學互換工作接手美術，從原本Unity藍畫面，一點一滴畫出Tilemap、角色的站立圖、背景、指示牌、標題等等，完成風格統一。最後感謝同組的同學，在多次討論後，能夠完成這款遊戲，也給了我許多合作的經驗。
+          🧠 I worked with three teammates to develop the game, which was inspired by Ultimate Chicken Horse. We explored the idea of a single-player game that allows control over multiple characters, each with unique abilities that must be combined cooperatively to complete a level. Our division of labor was: one focused on character functionality, another on art, a third on integration, while I was initially responsible for level design. However, as we realized that art production was taking too much time, I offered to switch roles and took over the art tasks. Starting from Unity’s default blue screen, I gradually created Tilemaps, character sprites, backgrounds, signs, titles, etc., ensuring a unified visual style.
+          In the end, I’m thankful to my team for the collaboration and discussions that made this game possible—it gave me valuable teamwork experience.
         </p>
         <!-- 連結 -->
         <div class="mb-4 space-y-1 text-sm">
           <p>🎥 <a href="https://drive.google.com/file/d/1-CmtwW7Dqas3fs6AcuduZh2wlIEJdzY2/view?usp=sharing" target="_blank" class="text-blue-600 underline">gameTrailer</a></p>
         </div>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unity、Shader</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Unity．Shader</span></p>
         </div>
       </div>
     </div>
@@ -472,26 +473,22 @@
       <!-- 文字介紹區塊 -->
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">📷 High Dynamic Range Imaging</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台大選修課-數位視覺效果．Feb 2022 - Mar 2022</p>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTU courses - Digital Visual Effects．Feb 2022 - Mar 2022</p>
         <p class="text-gray-700 mb-4">
-          由於受限於電腦儲存的RGB，照片會喪失一些資訊，因此藉由分析多張不同曝光照片的方式製作出HDR影像，為了取樣同一個像素在不同曝光的值，要先做到Alignment，使用Median Threshold Bitmap
-          Alignment演算法，將多張不同曝光照片相鄰兩張對齊，接著分析相機Response Curves，求解least-square
-          problem，得到該顏色的能量分布，最後套上Photographics或Bilateral-filtering等不同種類的Tone Mapping，得到栩栩如生的HDR影像。
+          Due to the limitations of RGB in digital storage, some information is lost in photographs. To address this, we generated HDR images by analyzing multiple photos taken at different exposures. To sample the same pixel across different exposures, alignment must first be achieved. We used the Median Threshold Bitmap Alignment algorithm to align adjacent photos, analyzed the Camera Response Curves, solved a least-square problem to obtain the color energy distribution, and finally applied different types of Tone Mapping (e.g., Photographic or Bilateral-filtering) to create vivid HDR images.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>📷 Median Threshold Bitmap Alignment: XOR兩張照片的Threshold bitmap，並以容許誤差範圍的Exclusion bitmap作為Mask，階層式取最小誤差
-          </li>
-          <li>🏙️ HDR Recovery: 取樣同一點在不同曝光下的顏色，使用SVD求解least-square problem，得出Response Curves</li>
-          <li>👻 Ghost removal: 在平均權重上添加懲罰，減少組合Radiance Map出現鬼影</li>
-          <li>☀️ Photographics: 分析luminance在全景中的表現，拉伸到RGB顯示範圍</li>
-          <li>📷 Bilateral-filtering: 取Intensity作Radiance Map保留高頻壓縮低頻的Filter</li>
+          <li>📷 Median Threshold Bitmap Alignment: XOR the threshold bitmaps of two photos and use the exclusion bitmap (within error tolerance) as a mask to hierarchically minimize error.</li>
+          <li>🏙️ HDR Recovery: Sample the same point under different exposures, use SVD to solve the least-square problem and derive the response curves.</li>
+          <li>👻 Ghost Removal: Add penalties to the average weights to reduce ghosting in the combined radiance map.</li>
+          <li>☀️ Photographics: Analyze luminance performance across the panorama and stretch it into the RGB display range.</li>
+          <li>📷 Bilateral Filtering: Use intensity to filter the radiance map, preserving high frequencies and compressing low frequencies.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 在這次的實作中，我所負責的部分是Tone Mapping，在課堂聆聽流程時，體會到線性代數的實用性，學習使用SVD求解least-square problem，以此得到照片的能量分布，接著比較兩種Tone
-          Mapping的優缺，發現影像取得luminance、Intensity公式並不一樣，也發現不一定都是同一種演算法最好，有些得到不如預期的、有些則是得到不好的曝光，但不論是使用哪一種方法，每一張照片都是藝術的一部分。
+          🧠 In this project, I was responsible for Tone Mapping. During lectures, I realized the practicality of linear algebra and learned to use SVD to solve the least-square problem for obtaining the energy distribution of an image. I compared two Tone Mapping approaches and discovered that the luminance and intensity formulas differ. No single algorithm is always optimal—some produced unexpected results, while others led to poor exposures. Regardless of the method used, each photo became a part of an artistic composition.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Tone Mapping、Python</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Tone Mapping、Python</span></p>
         </div>
       </div>
     </div>
@@ -534,25 +531,22 @@
       <!-- 文字介紹區塊 -->
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">⛰️ Image Stitching</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台大選修課-數位視覺效果．Mar 2022 - Apr 2022</p>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTU courses - Digital Visual Effects．Mar 2022 - Apr 2022</p>
         <p class="text-gray-700 mb-4">
-          透過組合多張照片，能夠組合成一大張的全景照，首先要先將照片投影成圓柱狀，再來找照片中的特徵點，使用SIFT、Harris或MSOP等演算法提取特徵點，兩兩照片互相找尋最相近的點，接著使用RANSAC擷取要被貼合的點，求解least-square
-          problem得出最適合的Affine Matrix，即可將照片貼在另一張上。
+          By combining multiple photos, a large panorama can be created. First, the photos are projected cylindrically, followed by feature point detection using algorithms like SIFT, Harris, or MSOP. Pairs of images are then matched by finding the closest feature points. We applied RANSAC to filter the match points and solved a least-square problem to derive the optimal Affine Matrix, allowing one image to be seamlessly stitched onto another.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🌏 Cylindrical projection: 將照片投影到圓柱面，以利後續Feature Matching</li>
-          <li>🔺 Multi-Scale Oriented Patches (MSOP): 多階層不同大小影像特徵點取得，先對影像作Gaussian，再找尋Harris Corner，帶入ANMS得平均分布的點</li>
-          <li>📽️ Adaptive Non-maximal Suppression (ANMS): 迭代遮罩特徵點周圍，遮罩範圍漸小，逐一取得特徵點的量，使最後得到的特徵點平均分布於畫面上</li>
-          <li>📷 Feature Matching: 每階層的特徵點為8x8 patch，提供位置、orientation、normalisation資訊，使用Nearest Neighbors演算法找相近圖片特徵點對映
-          </li>
-          <li>🚩 RANSAC: 迭代取樣特徵點對，解least-square problem求Affine Matrix</li>
+          <li>🌏 Cylindrical Projection: Project images onto a cylindrical surface to facilitate feature matching.</li>
+          <li>🔺 Multi-Scale Oriented Patches (MSOP): Detect image features at multiple scales by applying Gaussian blur, finding Harris corners, and using ANMS to distribute points evenly.</li>
+          <li>📽️ Adaptive Non-Maximal Suppression (ANMS): Iteratively mask surrounding features, reduce masking range, and extract evenly distributed points.</li>
+          <li>📷 Feature Matching: Feature points from each scale are represented as 8x8 patches with position, orientation, and normalization. Nearest Neighbors algorithm is used for matching.</li>
+          <li>🚩 RANSAC: Iteratively sample feature point pairs, solve the least-square problem to derive the Affine Matrix.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 在這個專案中，我負責實作Cylindrical projection、MSOP、ANMS以及特徵點配對，使用Nearest
-          Neighbors尋找最相近的點，由於參數可以調整的部分很多，一開始只抓得到少數特徵點，調整參數後有比較符合配對預期。Blending的過程中，我們發現若是接合移動的物體會使得結果模糊，像是樹或者水流，但若是不在接合處，就能夠有複製的效果，這是我們覺得蒐集素材有趣的地方。
+          🧠 I was responsible for implementing Cylindrical Projection, MSOP, ANMS, and Feature Matching. Using Nearest Neighbors to match points, I initially detected only a few features, but tuning parameters improved the matching quality. During blending, we noticed that moving objects (like trees or water) caused blur when in the stitching area, but could be duplicated cleanly if outside it—making the photo collection process quite interesting.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Cylindrical projection、MSOP、ANMS、Python</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Cylindrical projection、MSOP、ANMS、Python</span></p>
         </div>
       </div>
     </div>
@@ -595,22 +589,21 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🏰 遊戲程式設計第一部曲 Chronicle of the Genocidal Precedence – Seed of Destruction</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-遊戲程式設計．Feb 2021 - Mar 2021</p>
+        <h2 class="text-2xl font-bold mb-2">🏰 Game Programming Part I - Chronicle of the Genocidal Precedence – Seed of Destruction</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Game Programming．Feb 2021 - Mar 2021</p>
         <p class="text-gray-700 mb-4">
-          認識Unity的環境，使用Unity的好處有多個現有互動的套件供使用，搭配即時場景，能夠加快配置場景的流程，減少開發的麻煩。為了提供敵人移動並攻擊玩家，使用NaviMesh讓AI找尋離玩家最近的距離並移動，在距離內看到玩家就會發射砲彈攻擊，坦克車的車頭與車身能夠在同一Hierarchy Transformation下，車頭面向攻擊目標，而車身依行駛方向改變面向。
+          We learned the Unity environment and benefited from its existing interactive packages and real-time scene capabilities, which simplified and accelerated development. To allow enemies to move and attack players, we used NavMesh to let AI find the shortest path to the player. When in range, enemies would fire projectiles. The tank's turret and body were under the same hierarchy: the turret rotated toward the target while the body changed direction according to movement.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🛣️ NaviMesh: 設定地形可移動範圍，提供敵人AI場景移動的依據</li>
-          <li>🦾 Hierarchy Transformation: 車頭依滑鼠方向旋轉，車身依鍵盤移動與旋轉</li>
-          <li>☀️ Particle System: 爆炸煙霧、房屋倒塌煙霧瀰漫的效果</li>
+          <li>🛣️ NavMesh: Defines walkable terrain and guides enemy AI navigation.</li>
+          <li>🦾 Hierarchy Transformation: Turret rotates based on mouse direction; the body rotates and moves with keyboard input.</li>
+          <li>☀️ Particle System: Simulates explosion smoke and building collapse effects.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 在這次的實作中，我所負責的部分是Tone Mapping，在課堂聆聽流程時，體會到線性代數的實用性，學習使用SVD求解least-square problem，以此得到照片的能量分布，接著比較兩種Tone
-          Mapping的優缺，發現影像取得luminance、Intensity公式並不一樣，也發現不一定都是同一種演算法最好，有些得到不如預期的、有些則是得到不好的曝光，但不論是使用哪一種方法，每一張照片都是藝術的一部分。
+          🧠 In this project, I was again responsible for Tone Mapping. I appreciated the practical use of linear algebra, used SVD to solve the least-square problem to obtain image energy distribution, and compared the pros and cons of two Tone Mapping methods. I found different formulas for luminance and intensity, and realized that no single algorithm is always best. Some results were unexpected or poorly exposed. However, every image, regardless of the method used, became part of the overall art piece.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unity、NaviMesh、Hierarchy Transformation、Particle System</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Unity、NaviMesh、Hierarchy Transformation、Particle System</span></p>
         </div>
       </div>
     </div>
@@ -653,24 +646,24 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🏰 遊戲程式設計第二部曲 Terrestrial Interference</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-遊戲程式設計．Mar 2021 - Apr 2021</p>
+        <h2 class="text-2xl font-bold mb-2">🏰 Game Programming Part II - Terrestrial Interference</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Game Programming．Mar 2021 - Apr 2021</p>
         <p class="text-gray-700 mb-4">
-          2D橫向卷軸遊戲是在電玩遊戲中其中一個類型，著名的有瑪利歐、洛克人，Unity提供多個2D資源，諸如可放入場景圖片的Sprite、物理碰撞等等。藉由2D遊戲製作，體驗簡單遊戲完整的設計流程，而特效在2D也容易展現，使用Distortion模擬熱擾動、疊合隨時間改變Offset的Noise當作Sandstorm、Pixelation模擬怪物消失等等，搭上劇情成為一款單人遊戲。
+          2D side-scrolling games are a classic genre—examples include Mario and Mega Man. Unity offers many 2D features like sprites and physics collisions. Through this project, we experienced the full development process of a simple game. Special effects were easy to implement in 2D: we used distortion to simulate heat waves, layered moving noise for sandstorms, and pixelation to simulate disappearing enemies. With a storyline, we turned it into a complete single-player game.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🦾 Hinge Joint 2D、Semi-Solid Platform: 賦予2D物理行為</li>
-          <li>⏳ Distortion: 以時間參數扭曲畫面，渲染熱擾動效果</li>
-          <li>🏜️ Sandstorm: 原畫面疊上一層半透明雜訊，設定從左而右移動的Offset</li>
-          <li>🎥 Pixelation: 依時序與預處理黑白圖相乘，呈現隨時間消失的效果</li>
-          <li>💬 AssetBundle: 以劇情走向載入特定批次的對話資訊</li>
-          <li>🤖 Animator: 設計角色與怪物動畫Sprite Animation，用變數切換動作動畫</li>
+          <li>🦾 Hinge Joint 2D, Semi-Solid Platform: Adds 2D physical behavior.</li>
+          <li>⏳ Distortion: Uses time-based parameters to distort visuals and simulate heatwaves.</li>
+          <li>🏜️ Sandstorm: Layers transparent noise over the scene and animates it with offset movement.</li>
+          <li>🎥 Pixelation: Multiplies a preprocessed grayscale mask over time to simulate vanishing.</li>
+          <li>💬 AssetBundle: Loads dialogue batches based on story progress.</li>
+          <li>🤖 Animator: Designs sprite animations for characters and monsters, switching states via variables.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 故事接續著第一部曲，遊戲設計成探索並擊倒怪物的動作遊戲，每一個地區可以收集我們隱藏起來的寶箱，這些寶物能夠合成大地圖，而遊戲內容分好壞兩種結局，好結局能夠獲得第三部曲的密碼。技術部分，要讓整體遊戲有回饋感，玩家被打到之後閃爍，怪物被冰凍槍有冰凍特效，消滅怪物的Pixelation特效，使用Animator做到怪物狀態機的各個動作。總結來說，整個遊戲花最久時間的就是設計圖片，為了使風格統一成像素風，以及設計角色動作，所有的圖片都是跟同學自創的。
+          🧠 This story continues from Part I. The game was designed as an action-adventure where players defeat monsters and collect hidden treasure chests across different areas. These treasures combine to form a world map. There are both good and bad endings—the good one reveals the password to Part III. Technically, we added visual feedback such as flashing when hit, freezing effects for ice weapons, and pixelation when enemies die. Using Animator, we implemented monster state machines. Most time was spent designing graphics to unify the pixel-art style and creating original character animations with classmates.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unity、Shader、AssetBundle、Animator</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Unity、Shader、AssetBundle、Animator</span></p>
         </div>
       </div>
     </div>
@@ -713,19 +706,19 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🏰 遊戲程式設計第三部曲 Warlord v.s. Government</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-遊戲程式設計．Apr 2021 - May 2021</p>
+        <h2 class="text-2xl font-bold mb-2">🏰 Game Programming Part III - Warlord v.s. Government</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Game Programming．Apr 2021 - May 2021</p>
         <p class="text-gray-700 mb-4">
-          透過遠端伺服器，可以將電腦與手機聯網遊玩，而Unity方便之處，在於能夠部屬在不同的平台，電腦、手機甚至網頁都可以，縮短跨平台開發的流程。因此，搭配Photon平台，能夠使手機與電腦對打，之中也需考慮同步雙方物件的規則，由哪一方擁有物件的控制權，避免一方的資料竄改，使得遊戲對一方有利。
+          By using a remote server, computers and mobile phones can be connected to play games online. One of Unity's advantages is its ability to deploy across various platforms—PC, mobile, or even web—streamlining the cross-platform development process. When paired with the Photon platform, phones and computers can battle each other. However, it's important to define synchronization rules for shared game objects, such as which side controls an object, to prevent data tampering that could favor one player.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>📶 Photon Unity Networking: 提供手機或電腦可連線的平台，並擬定同步物件下的規則，物件的擁有權不可隨意被另一方消除。</li>
+          <li>📶 Photon Unity Networking: Provides a platform for connecting mobile and desktop devices, and defines rules for object synchronization. Object ownership cannot be arbitrarily overridden by the other side.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 繼第二部曲之後，故事劇情描述敵方陣營發現我方陣營的位置並展開對戰。遊戲設計成雙人連線塔防遊戲，由於是使用Photon平台連線，手機可以與電腦對打。開發過程中，我們發現檯面上的物件需要考慮控制權，以避免非預期結果，受限Photon在網路傳輸的流量，只能傳送類似指令控制兩方遊戲物件。
+          🧠 In the second installment of our story, the enemy discovers our base and initiates an attack. The game is designed as a two-player co-op tower defense game. Because it uses Photon for networking, players on phones and computers can compete. During development, we found it necessary to define control rules for game objects to prevent unexpected behaviors. Due to Photon’s limited bandwidth, only command-like instructions can be transmitted to control the objects on both sides.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unity、Photon、Networking、Client–server model</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Unity、Photon、Networking、Client–server model</span></p>
         </div>
       </div>
     </div>
@@ -768,22 +761,22 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🏰 遊戲程式設計第四部曲 Culmination of War</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-遊戲程式設計．May 2021 - Jun 2021</p>
+        <h2 class="text-2xl font-bold mb-2">🏰 Game Programming Part IV - Culmination of War</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Game Programming．May 2021 - Jun 2021</p>
         <p class="text-gray-700 mb-4">
-          與Unity寫程式方式不同，Unreal使用線串聯功能。Unreal適合製作第一人稱射擊遊戲，技術重點在於快速的子彈移動傷害處理，搭配Ray Tracing檢查，避免子彈穿牆擊中玩家。在光影渲染上可調整Global illumination，使場景有更真實的感受。
+          Unlike Unity’s programming style, Unreal uses node-based scripting. Unreal is well-suited for first-person shooter (FPS) games, emphasizing fast bullet movement and damage processing. Ray tracing is used to detect bullet collisions, ensuring they don’t go through walls and hit players unfairly. For lighting, Global Illumination can be adjusted to enhance realism.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🪁 Windzone: 區域性的使旗幟飄逸、周圍的樹木搖曳，並擺放合適中心位置</li>
-          <li>🚩 Cloth Simulation: 旗幟模型切割多片Mesh，賦予特殊物理碰撞</li>
-          <li>💣 Particle System: 煙霧、槍枝火花、火焰特效</li>
-          <li>🎯 Ray Tracing: 檢測子彈運動是否合理，避免穿牆誤傷玩家</li>
+          <li>🪁 Windzone: Adds regional wind effects to make flags flutter and trees sway, with a defined center.</li>
+          <li>🚩 Cloth Simulation: Flags are cut into multiple mesh pieces and given special physics-based collision.</li>
+          <li>💣 Particle System: Used for smoke, muzzle flashes, and fire effects.</li>
+          <li>🎯 Ray Tracing: Ensures bullet behavior is realistic, avoiding wall-penetration bugs.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 作為四部曲最後一個作品，劇情串聯前三部作品，以華盛頓跨河為靈感，與同學討論出擊倒核心人物為遊戲目標。安排場景上，Unreal在光影表現上較寫實，也因此使用起來比Unity需要更多電腦效能。技術方面，我們發現子彈偶爾會穿牆，因此我們使用Ray Tracing偵測是否與子彈碰撞，作為是否扣血的依據。
+          🧠 As the final chapter of the four-part series, the story connects all previous parts, inspired by Washington crossing the Delaware. The game’s goal, discussed with classmates, is to defeat a central figure. Unreal’s lighting and realism require more computing power than Unity. Technically, we discovered bullets occasionally passed through walls, so we used ray tracing to detect collisions and determine if damage should be applied.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">Unreal、第一人稱射擊遊戲、Particle System、Ray Tracing</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">Unreal．FPS．Particle System．Ray Tracing</span></p>
         </div>
       </div>
     </div>
@@ -826,24 +819,24 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">⛰️ 影像處理Image Editing</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-電腦圖學導論．Sep 2020</p>
+        <h2 class="text-2xl font-bold mb-2">⛰️ Image Editing</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Computer Graphics．Sep 2020</p>
         <p class="text-gray-700 mb-4">
-          了解影像如何編碼、對影像作縮放等等，目的是熟悉有關影像處理的理論，並實作基本影像處理的技術。最基本的灰階功能，到統計顏色資訊Populosity Quantization，以及使用特殊演算法達到特殊效果的Dithering，還有實作NxN Kernel的Gaussian Filter，給予任意N也能夠完成該強度的Gaussian Filter，還有實作Edge Detection等等。
+          We learned how images are encoded, scaled, and processed to better understand image processing theory and to implement basic techniques. Starting from grayscale conversion to Populosity Quantization, which statistically assigns similar new colors, and Dithering effects using special algorithms, as well as implementing an NxN Gaussian Filter with adjustable strength and Edge Detection techniques.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🎥 Populosity Quantization: 蒐集數量下的顏色，賦予舊顏色為相近的新顏色</li>
-          <li>🎥 Dithering - Brightness: 統計灰階值，平均灰階值作為閾值</li>
-          <li>🎥 Dithering - Cluster: 提供4x4區域閾值，依區域過濾</li>
-          <li>🎥 Dithering - Floyds: 以Zig-zag順序，傳遞資訊給指定鄰近格</li>
-          <li>🎥 Gaussian Filter: 提供NxN Kernel，與解決Kernel在畫面之外取值的問題</li>
-          <li>🎥 Edge Detect: 使用高頻的Filter取得結果</li>
+          <li>🎥 Populosity Quantization: Collects frequently used colors and maps old colors to nearby ones.</li>
+          <li>🎥 Dithering - Brightness: Uses average grayscale values as a threshold.</li>
+          <li>🎥 Dithering - Cluster: Applies a 4x4 threshold matrix for local filtering.</li>
+          <li>🎥 Dithering - Floyd’s: Zig-zag passes error information to adjacent pixels.</li>
+          <li>🎥 Gaussian Filter: Supports NxN kernel sizes and handles edge sampling issues.</li>
+          <li>🎥 Edge Detection: Uses high-frequency filters to extract edges.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 在這個作業中，從基本的轉灰階，進一步到蒐集整體影像資訊的Quantization，以及經過特殊演算法做出的功能，過程中遇到顏色數值溢位的處理，還要考慮預防讀取邊界之外的值、讀取的策略，對往後圖學的處理有了一定的基礎。
+          🧠 This assignment progressed from basic grayscale conversion to quantization that summarizes image statistics, and to functions built from unique algorithms. Challenges included handling color overflow and preventing out-of-bounds memory access, which provided a solid foundation for future graphics processing.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">C++、libtarga</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">C++．libtarga</span></p>
         </div>
       </div>
     </div>
@@ -886,20 +879,20 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🏰 迷宮Maze Visibility and Rendering Graphics</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-電腦圖學導論．Oct 2020</p>
+        <h2 class="text-2xl font-bold mb-2">🏰 Maze Visibility and Rendering Graphics</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Computer Graphics．Oct 2020</p>
         <p class="text-gray-700 mb-4">
-          開始認識3D物件如何成像在螢幕上，在圖學的世界中，必須要熟悉世界物體的Transformation、相機的FOV、Near Plane、Far Plane，先從物體放置於世界的Model View Matrix，接著相機的Perspective Matrix投影到畫面上。而畫面物件的渲染需要經過Clipping，忽略不在視野內的牆壁，並在沒有牆壁的那面遞迴進入到下一道遠方的牆壁，所有物件的成像限制只使用OpenGL中的2D功能來呈現3D成果。
+          We began learning how 3D objects are rendered onto a screen. In computer graphics, it’s essential to understand world transformations, camera FOV, and near/far planes. Starting with the Model View Matrix for world placement, and the Perspective Matrix for projection, rendering also involves Clipping to exclude walls outside the field of view. When no wall is detected, the algorithm recursively traces to the next visible wall. All 3D rendering is accomplished using only OpenGL’s 2D functionality.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🎥 Model View Matrix、Perspective Matrix: 物件的Transformation寫入Model View Matrix，根據相機FOV等參數寫入Perspective Matrix呈現畫面</li>
-          <li>🎥 Clipping (View Frustum Culling): 所有物件只擷取視角內的畫面渲染</li>
+          <li>🎥 Model View Matrix, Perspective Matrix: Model transformations are written into the model-view matrix; the camera’s FOV and other parameters into the perspective matrix to display the scene.</li>
+          <li>🎥 Clipping (View Frustum Culling): Renders only objects within the visible frustum.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 這個作業有趣的地方在於限制只能使用2D的程式碼，畫出3D的物件，相機的Frustum、投影矩陣都要自己計算。一開始先從1格4面牆的著手，能夠成功顯示在螢幕上之後，再進一步衍伸到顯示多面牆，過程中要想如何有效遞迴參數到鄰近格，也有遇到浮點數誤差，不過完成這個作業後，對圖學研究有了信心。
+          🧠 The fun part of this assignment was the constraint to use only 2D code to draw 3D objects. Camera frustums and projection matrices had to be computed manually. We started with a simple room of 4 walls and then expanded to multiple walls. Recursive parameters had to be managed efficiently, and we encountered floating-point errors. After completing the assignment, we gained confidence in studying computer graphics.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、MVP Matrix、Clipping、C++</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">OpenGL．MVP Matrix．Clipping．C++</span></p>
         </div>
       </div>
     </div>
@@ -942,20 +935,20 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🎢 雲霄飛車Trains and Roller Coasters</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-電腦圖學導論．Oct 2020</p>
+        <h2 class="text-2xl font-bold mb-2">🎢 Trains and Roller Coasters</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Computer Graphics．Oct 2020</p>
         <p class="text-gray-700 mb-4">
-          藉由雲霄飛車的方式，認識以數學化方式設計彎曲的軌道，並利用OpenGL熟悉佈置3D場景，進一步呈現光影。藉由線性代數學到的矩陣，將物件的位置、旋轉、大小簡化問題成矩陣乘法，而Cardinal Spline、Cubic Spline下的軌道也可透過矩陣相乘完成。
+          Through designing a roller coaster, we learned how to mathematically create curved tracks and used OpenGL to set up 3D scenes and render lighting. Using matrix operations from linear algebra, object transformations (position, rotation, scale) were simplified. The Cardinal Spline and Cubic Spline paths were generated using matrix multiplications.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🛤️ Cardinal Spline、Cubic Spline: 控制點位置和方向與曲線參數的矩陣相乘</li>
-          <li>🛤️ ArcLength: 以漸進式推近，最後以比例設新位置成等距ArcLength</li>
+          <li>🛤️ Cardinal Spline, Cubic Spline: Position and direction control points are multiplied with curve parameter matrices.</li>
+          <li>🛤️ ArcLength: Uses progressive refinement to place new positions at equal arc-length intervals.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 軌道是由控制點形成的，透過矩陣的方式，每種Spline畫出來的位置算出來，依序把線「接起來」，軌道有長有短，用等距ArcLength讓雲霄飛車不會在距離短的控制點之間太慢或者距離拉太長而變快。過程中為了增加有趣性，也嘗試把obj模型載入進來，並在車頭添加車燈。
+          🧠 Tracks were formed by connecting control points. Using matrices, we computed positions on various spline curves and connected them one by one. To ensure a consistent speed, we used arc-length parameterization so the roller coaster wouldn't speed up or slow down too much between points. For added fun, we tried loading .obj models and added headlights to the roller coaster car.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、Spline、C++</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">OpenGL．Spline．C++</span></p>
         </div>
       </div>
     </div>
@@ -998,20 +991,20 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🌊 水面模擬Water Surface and Rendering (GPU Shader)</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-電腦圖學導論．Nov 2020</p>
+        <h2 class="text-2xl font-bold mb-2">🌊 Water Surface and Rendering (GPU Shader)</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Computer Graphics．Nov 2020</p>
         <p class="text-gray-700 mb-4">
-          Mesh由點線面架構組成，大量的運算使得需要依靠GPU計算，運用Shader繪製物件，模擬出Sin波和根據Heightmap起伏兩種不同的水面，學習模擬水面反射與折射，本作品特點在於使用dynamic environment mapping反射水面上的物體。
+          A mesh is composed of vertices, edges, and faces. Due to the heavy computations required, GPU acceleration is essential. Objects are rendered using shaders, and two types of water surfaces are simulated: one with sine waves and another with heightmap-based undulations. The project focuses on learning how to simulate water reflection and refraction, with a key feature being the use of dynamic environment mapping to reflect surrounding objects on the water surface.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🔆 Material: 結合Directional light、Spot light、Point light對 Ambient、Diffuse、Specular不同的處理，作多個不同光源的結果相加</li>
-          <li>⛰️ Dynamic Environment mapping: 先繪製一次場景在Framebuffers，投放六個方向的畫面於Skybox，接著繪製水面時，水面Shader中反射與折射參考此Skybox，解決只反射天空無周圍物體的問題</li>
+          <li>🔆 Material: Combines directional light, spot light, and point light to calculate ambient, diffuse, and specular components, summing the results of multiple light sources.</li>
+          <li>⛰️ Dynamic Environment Mapping: The scene is first rendered into framebuffers in six directions and mapped onto a skybox. When rendering the water surface, its shader references the skybox for reflection and refraction, solving the issue of only reflecting the sky without surrounding objects.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 水面模擬從未接觸之前就覺得是很神奇的技術，也是踏入物理模擬世界的其中一步，實作過程發現水面的Mesh的Vertex位置計算量非常大，若不用Shader來計算，電腦會非常的卡且難以執行。因為是第一次接觸到Shader，在編寫或Debug體驗到寫Shader的麻煩之處，給錯Shader位置或者型別不對都會使得成果不如預期，當時花了很多時間在找原因，但這也成為了日後寫Shader的經驗。為了讓水面能夠投影物件，特別去蒐集Dynamic Environment mapping的資訊，了解到需要使用Framebuffers，最後按照反射與折射，成像光打到的Skybox影像。
+          🧠 Water surface simulation always felt like a magical technology even before I learned it, and it was one of my first steps into the world of physical simulation. During implementation, I discovered that computing the vertex positions of the water mesh is very intensive. Without shaders, the computer would lag heavily and be difficult to use. Since this was my first experience with shaders, I encountered many issues when writing and debugging them — from incorrect shader placement to wrong data types — all of which led to unexpected results and took a lot of time to troubleshoot. However, these experiences became valuable for future shader development. To make the water surface capable of reflecting objects, I specifically researched dynamic environment mapping, learned that it requires framebuffers, and finally rendered reflected and refracted views using skybox images affected by lighting.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、Shader、Lighting、Dynamic Environment mapping、C++</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">OpenGL．Shader．Lighting．Dynamic Environment mapping．C++</span></p>
         </div>
       </div>
     </div>
@@ -1054,21 +1047,21 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🤖 Hierarchy機器人</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-基礎電腦圖學．Mar 2021</p>
+        <h2 class="text-2xl font-bold mb-2">🤖 Hierarchy Robot Animation</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Fundamental Computer Graphics．Mar 2021</p>
         <p class="text-gray-700 mb-4">
-          透過Hierarchical Transformation讓機器人能夠做出騎馬舞、開合跳、月球漫步等多關節動作，也能達到如拔劍切換不同Transformation關係的動作，並使用Shader特效，例如光影、粒子效果、動態模糊等使結果豐富。
+          Using hierarchical transformations, the robot can perform complex multi-joint motions such as Gangnam Style, jumping jacks, and the moonwalk. It also supports actions like drawing a sword, which require switching transformation hierarchies. Shaders were used for visual effects such as lighting, particle systems, and motion blur to enhance the visual richness.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🦾 Hierarchy Transformation: 計算縮放旋轉移動矩陣，矩陣相乘出綜合結果</li>
-          <li>🔆 Shadow Mapping: 配合光的角度拍攝深度圖，其中也要拿捏深度圖解析度</li>
-          <li>🎥 Particle System: 給予不同起始時間與角度，達到粒子分散效果</li>
+          <li>🦾 Hierarchical Transformation: Calculates the combined transformation matrix from scaling, rotation, and translation matrices.</li>
+          <li>🔆 Shadow Mapping: Captures a depth map from the light's perspective; requires fine-tuning the depth map’s resolution.</li>
+          <li>🎥 Particle System: Assigns different start times and angles to particles for a scattered visual effect.</li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 要達到Hierarchy，必須要先對模型的物件依照可動部位分群並歸類，所使用的軟體是Maya，過程中發現到模型的材質在轉換型別時跑掉了，為了復原材質，特地將每一個物件手動歸類成原本的材質，有了一個模型不只一種材質的概念。完成分類後，接著要依照規定的動作，分時給予OpenGL改變物件的Transformation Matrix，每一個動作都要想這裡要動左臂或者那裡要動右翅膀，因為Hierarchy，每個部位都會連動影響，想辦法做出指定動作，其中也在拔刀動作遇到從左腳Hierarchy轉換到右手的Hierarchy上的問題。最後搭配Shader施展特效，例如增加影子的Shadow mapping，使整體的表演更加精采。
+          🧠 To implement a hierarchy, the model must first be grouped by movable parts. I used Maya for this process and discovered that material assignments were lost when converting model formats. To fix this, I manually reassigned the original materials to each object, gaining a better understanding that a single model can have multiple materials. After grouping, I used OpenGL to change transformation matrices over time according to the specified motions. Every movement — whether moving the left arm or flapping the right wing — had to consider the interdependence of parts due to the hierarchy. I also encountered challenges like transitioning from the left leg’s hierarchy to the right hand’s hierarchy during the sword-drawing animation. Finally, I enhanced the overall performance with shader effects, such as shadow mapping, to make the animation more vivid and expressive.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、Shader、Hierarchy Transformation、Lighting、Shadow Mapping、C++</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">OpenGL．Shader．Hierarchy Transformation．Lighting．Shadow Mapping．C++</span></p>
         </div>
       </div>
     </div>
@@ -1111,21 +1104,21 @@
 
       <!-- 文字介紹區塊 -->
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-2">🔍 OpenMesh參數化貼圖</h2>
-        <p class="text-sm text-gray-500 font-medium mb-4">台科大選修課-基礎電腦圖學．May 2021</p>
+        <h2 class="text-2xl font-bold mb-2">🔍 OpenMesh Parameterized Texture Mapping</h2>
+        <p class="text-sm text-gray-500 font-medium mb-4">NTUST courses - Fundamental Computer Graphics．May 2021</p>
         <p class="text-gray-700 mb-4">
-          介紹OpenMesh的資料結構，以Vertex、Halfedge、Edge、Face組合成一個Mesh，之中也存在著Face-Face、Face-Vertex、Edge-Face的One-ring結構，依照屬性也會有處理Color、Position、TexCoord、Normal，透過這些特性，將一大片接連起來的三角面正確求解Texture參數化作為作業目標，在指定的模型塗上任意數量的Texture，並且對Texture進行Transformation，也能夠存取Texture檔案。
+          This section introduces the OpenMesh data structure, where a mesh is built from vertices, half-edges, edges, and faces. It includes one-ring structures such as face-face, face-vertex, and edge-face connections. Depending on the attributes, color, position, texture coordinates, and normals can also be processed. Using these features, the assignment goal was to compute texture parameterization over a connected mesh of triangles, applying any number of textures to a given model and performing transformations on them, including reading texture files.
         </p>
         <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-          <li>🎯 Parameterization: Mean Value Coordinates
-            此方法用於解決一大片Mesh每個Vertex的uv座標，首先在每個非邊界的Edge，Edge兩個Vertex個別求出在Edge旁的兩角度，賦予Vertex相互關係的權重，邊界上的Edge分布到uv座標的四邊，得出邊界Vertex的uv座標，接著以One-ring走訪非邊界Vertex所連接的Vertex，擺放權重加總於矩陣中，最後求解Linear equations得出非邊界Vertex的uv座標。
+          <li>🎯 Parameterization - Mean Value Coordinates:
+              This method solves for the UV coordinates of each vertex in a large mesh. For non-boundary edges, it calculates the angles on either side of the edge at its two vertices and assigns weights to the vertices based on these angles. Boundary edges are distributed across the four sides of UV space to determine boundary UV coordinates. Then, using the one-ring neighborhood, it builds a matrix of weights for non-boundary vertices and solves the linear equations to compute their UV coordinates.
           </li>
         </ul>
         <p class="text-gray-600 text-sm">
-          🧠 這次使用的OpenMesh在理解資料結構上研究了一段時間，也是幫助了解處理Mesh的有效作法，對於輸入的模型而言，也要了解到一個obj模型的組成方式，且模型擁有龐大的資料，在讀取與操作必須使用Shader，藉由GPU幫助渲染，而Shader只要參數設定錯誤就無法如期渲染，因此每個環節都需注意。克服了使用OpenMesh存取模型後，下一步是求解Texture的uv座標，而這裡參數化的過程不僅需要深入理解公式的意義，過程還需要求解Linear equations，最後才會算出每個Vertex的uv座標，深刻體會到Texture的背後有許多數學知識。
+          🧠 Using OpenMesh required considerable time to understand its data structure, which helped me grasp efficient mesh processing methods. To work with input models, I had to understand the structure of an .obj file, which contains massive amounts of data. Rendering and manipulation must be offloaded to the GPU via shaders. Any incorrect parameter settings in the shader can prevent proper rendering, so every detail matters. After overcoming the challenge of accessing models via OpenMesh, the next step was solving for UV texture coordinates. This required a deep understanding of the underlying formulas and solving linear equations to derive the UVs. It helped me realize how much mathematical knowledge lies behind something as seemingly simple as texturing.
         </p>
         <div class="mt-4 text-sm">
-          <p><strong class="text-gray-700">🔑 關鍵字：</strong><span class="text-blue-600 font-medium">OpenGL、OpenMesh、Parameterization、C++</span></p>
+          <p><strong class="text-gray-700">🔑 Keywords: </strong><span class="text-blue-600 font-medium">OpenGL．OpenMesh．Parameterization．C++</span></p>
         </div>
       </div>
     </div>
